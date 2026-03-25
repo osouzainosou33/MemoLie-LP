@@ -1,0 +1,20 @@
+{
+    "name": "MemoLie",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@types/aos": "^3.0.7",
+        "aos": "^2.3.4",
+        "nuxt": "^4.4.2",
+        "swiper": "^12.1.3",
+        "vue": "^3.5.30",
+        "vue-router": "^5.0.4"
+    }
+}
