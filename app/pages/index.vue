@@ -1,15 +1,5 @@
 <template>
     <div>
-        <!-- Lightbox -->
-        <Transition name="fade">
-            <div v-if="lightboxOpen" class="lightbox" @click="closeLightbox">
-                <button class="lightbox-close" @click.stop="closeLightbox">
-                    ✕
-                </button>
-                <img class="lightbox-img" :src="lightboxSrc" alt="" />
-            </div>
-        </Transition>
-
         <!-- Header -->
         <header
             class="site-header"
@@ -18,7 +8,7 @@
             }"
         >
             <a href="#top" class="header-logo">
-                <img src="/assets/icon.png" alt="MemoLie" />
+                <img src="/assets/icon.png" alt="MemoLie" width="40" height="40" loading="lazy" />
                 <span class="header-logo-name">MemoLie</span>
             </a>
             <nav class="header-nav">
@@ -40,7 +30,7 @@
                 >
                     <div class="hero-badge">Golf Swing Memo App</div>
                     <h1 class="hero-headline">
-                        練習の気づきを、<br />
+                        ゴルフ練習の気づきを、<br />
                         <span class="accent">コースで再現</span><br />
                         するアプリ。
                     </h1>
@@ -72,7 +62,8 @@
                             <div class="device-screen">
                                 <img
                                     src="/assets/screenshot_07.png"
-                                    alt="成長ログ"
+                                    alt="MemoLie ゴルフ練習メモアプリ - 成長ログ画面"
+                                    loading="eager"
                                 />
                             </div>
                         </div>
@@ -82,7 +73,9 @@
                             <div class="device-screen">
                                 <img
                                     src="/assets/screenshot_01.png"
-                                    alt="ホーム"
+                                    alt="MemoLie ゴルフ練習メモアプリ - ホーム画面"
+                                    loading="eager"
+                                    fetchpriority="high"
                                 />
                             </div>
                         </div>
@@ -91,6 +84,7 @@
                         class="hero-memokun"
                         src="/assets/memokun.png"
                         alt="メモくん"
+                        loading="lazy"
                     />
                 </div>
             </div>
@@ -130,7 +124,7 @@
                     data-aos="fade-left"
                     data-aos-delay="100"
                 >
-                    <img src="/assets/memokun.png" alt="メモくん" />
+                    <img src="/assets/memokun.png" alt="メモくん" loading="lazy" />
                     <div class="origin-quote">
                         「ライが悪い時、どうすれば？」<br />
                         その答えを、あなた自身が<br />ここに積み重ねていく。
@@ -178,6 +172,7 @@
                 class="memokun-center"
                 src="/assets/memokun.png"
                 alt="メモくん"
+                loading="lazy"
                 data-aos="zoom-in"
             />
             <p class="section-label" data-aos="fade-up">Solution</p>
@@ -195,7 +190,7 @@
             <div class="section-inner">
                 <p class="section-label" data-aos="fade-up">Features</p>
                 <h2 class="section-title" data-aos="fade-up">
-                    MemoLie でできること
+                    ゴルフ練習メモアプリ MemoLie でできること
                 </h2>
                 <div
                     v-for="(feature, index) in features"
@@ -220,47 +215,12 @@
                                 <img
                                     :src="feature.screenshot"
                                     :alt="feature.tag"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Gallery -->
-        <section class="gallery">
-            <div class="gallery-header" data-aos="fade-up">
-                <p class="section-label light">Screenshots</p>
-                <h2 class="section-title" style="color: white">
-                    アプリ画面を見てみよう
-                </h2>
-                <p
-                    class="section-body"
-                    style="color: rgba(255, 255, 255, 0.6); margin: 0 auto"
-                >
-                    タップで拡大できます
-                </p>
-            </div>
-            <div class="swiper gallery-swiper">
-                <div class="swiper-wrapper">
-                    <div
-                        v-for="(shot, index) in screenshots"
-                        :key="index"
-                        class="swiper-slide"
-                        @click="openLightbox(shot)"
-                    >
-                        <div class="tablet-frame">
-                            <div class="tablet-screen">
-                                <img
-                                    :src="shot"
-                                    :alt="'スクリーンショット ' + (index + 1)"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -279,7 +239,7 @@
                     style="text-align: center"
                     data-aos="fade-up"
                 >
-                    3ステップで<br />スコアアップへ
+                    3ステップで<br />ゴルフ上達・スコアアップへ
                 </h2>
                 <div class="steps-grid">
                     <div
@@ -295,7 +255,7 @@
                         </div>
                         <p>{{ step.body }}</p>
                         <div class="step-screenshot">
-                            <img :src="step.screenshot" :alt="step.title" />
+                            <img :src="step.screenshot" :alt="step.title" loading="lazy" />
                         </div>
                     </div>
                 </div>
@@ -311,7 +271,7 @@
                             こんな方に
                         </p>
                         <h2 class="section-title" data-aos="fade-up">
-                            MemoLie が<br />ぴったりな人
+                            ゴルフ上達を目指す、<br />あなたへ
                         </h2>
                         <div class="target-list">
                             <div
@@ -327,7 +287,7 @@
                         </div>
                     </div>
                     <div class="target-visual" data-aos="zoom-in">
-                        <img src="/assets/memokun.png" alt="メモくん" />
+                        <img src="/assets/memokun.png" alt="メモくん" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -377,6 +337,7 @@
                 class="memokun-cta"
                 src="/assets/memokun.png"
                 alt="メモくん"
+                loading="lazy"
                 data-aos="zoom-in"
             />
             <p class="section-label" data-aos="fade-up">Download</p>
@@ -387,7 +348,12 @@
                 無料ダウンロード。登録不要ですぐ使えます。
             </p>
             <div class="cta-actions" data-aos="fade-up">
-                <a href="#" class="btn-primary">
+                <a
+                    href="https://apps.apple.com/jp/app/memolie/id6760087461"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary"
+                >
                     <svg viewBox="0 0 24 24" style="fill: var(--yellow)">
                         <path
                             d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
@@ -403,7 +369,7 @@
         <footer>
             <div class="footer-inner">
                 <a href="#top" class="footer-logo">
-                    <img src="/assets/icon.png" alt="MemoLie" />
+                    <img src="/assets/icon.png" alt="MemoLie" width="40" height="40" loading="lazy" />
                     <span class="footer-logo-name">MemoLie</span>
                 </a>
                 <div class="footer-links">
@@ -418,60 +384,24 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import Swiper from "swiper";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Lightbox state
-const lightboxOpen = ref(false);
-const lightboxSrc = ref("");
-
 // Header scroll state
 const scrolled = ref(false);
-
-function openLightbox(src: string) {
-    lightboxSrc.value = src;
-    lightboxOpen.value = true;
-    document.body.style.overflow = "hidden";
-}
-
-function closeLightbox() {
-    lightboxOpen.value = false;
-    document.body.style.overflow = "";
-}
 
 function handleScroll() {
     scrolled.value = window.scrollY > 40;
 }
 
-function handleKeydown(e: KeyboardEvent) {
-    if (e.key === "Escape") closeLightbox();
-}
-
 onMounted(() => {
     AOS.init({ duration: 700, once: true, offset: 60 });
 
-    new Swiper(".gallery-swiper", {
-        modules: [Pagination, Autoplay],
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 24,
-        loop: true,
-        autoplay: { delay: 2200, disableOnInteraction: false },
-        loopAdditionalSlides: 4,
-        pagination: { el: ".swiper-pagination", clickable: true },
-    });
-
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("keydown", handleKeydown);
 });
 
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("keydown", handleKeydown);
 });
 
 // Data
@@ -547,17 +477,6 @@ const features = [
         ],
         screenshot: "/assets/screenshot_07.png",
     },
-];
-
-const screenshots = [
-    "/assets/screenshot_01.png",
-    "/assets/screenshot_05.png",
-    "/assets/screenshot_06.png",
-    "/assets/screenshot_07.png",
-    "/assets/screenshot_04.png",
-    "/assets/screenshot_02.png",
-    "/assets/screenshot_03.png",
-    "/assets/screenshot_08.png",
 ];
 
 const steps = [

@@ -10,6 +10,7 @@
         "postinstall": "nuxt prepare"
     },
     "dependencies": {
+        "@nuxt/image": "^2.0.0",
         "@types/aos": "^3.0.7",
         "aos": "^2.3.4",
         "nuxt": "^4.4.2",
