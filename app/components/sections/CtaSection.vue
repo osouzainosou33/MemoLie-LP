@@ -2,7 +2,7 @@
     <section class="cta-bottom" id="download">
         <img
             class="memokun-cta"
-            src="/assets/memokun.png"
+            src="/assets/memokun_fun.png"
             alt="メモくん"
             loading="lazy"
             data-aos="zoom-in"

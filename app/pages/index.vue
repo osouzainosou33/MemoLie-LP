@@ -2,7 +2,6 @@
     <div>
         <AppHeader />
         <HeroSection />
-        <OriginSection />
         <ProblemSection />
         <SolutionSection />
         <FeaturesSection />

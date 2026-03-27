@@ -1,10 +1,18 @@
 <template>
     <section class="section problem">
         <div class="section-inner">
-            <p class="section-label" data-aos="fade-up">Problem</p>
-            <h2 class="section-title" data-aos="fade-up">
-                ゴルフ練習、<br />こんな悩みありませんか？
-            </h2>
+            <div class="problem-intro" data-aos="fade-up">
+                <img
+                    src="/assets/memokun_worry.png"
+                    alt="悩むメモくん"
+                    loading="lazy"
+                    class="memokun-worry"
+                />
+                <p class="section-label">Problem</p>
+                <h2 class="section-title">
+                    ゴルフ練習、<br />こんな悩みありませんか？
+                </h2>
+            </div>
             <div class="problem-grid">
                 <div
                     v-for="(item, index) in problems"
@@ -56,3 +64,49 @@ const problems = [
     },
 ]
 </script>
+
+<style scoped>
+.problem {
+    background: #1e1e20;
+}
+
+.problem-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.memokun-worry {
+    width: 100px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.section-label {
+    color: #e05555;
+}
+
+.section-title {
+    color: #ffffff;
+}
+
+.pain-card {
+    background: #2c2c2e;
+    border-color: #3a3a3c;
+}
+
+.card-icon {
+    background: #7f1d1d;
+    color: #fca5a5;
+}
+
+.pain-card h3 {
+    color: #f5f5f5;
+}
+
+.pain-card p {
+    color: #9ca3af;
+}
+</style>
