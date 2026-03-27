@@ -2,7 +2,7 @@
     <footer>
         <div class="footer-inner">
             <a href="#top" class="footer-logo">
-                <img src="/assets/icon.png" alt="MemoLie" />
+                <img src="/assets/icon.png" alt="MemoLie" width="40" height="40" loading="lazy" />
                 <span class="footer-logo-name">MemoLie</span>
             </a>
             <div class="footer-links">

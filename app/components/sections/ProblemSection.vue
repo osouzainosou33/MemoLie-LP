@@ -2,7 +2,9 @@
     <section class="section problem">
         <div class="section-inner">
             <p class="section-label" data-aos="fade-up">Problem</p>
-            <h2 class="section-title" data-aos="fade-up">こんな悩み、<br />ありませんか？</h2>
+            <h2 class="section-title" data-aos="fade-up">
+                ゴルフ練習、<br />こんな悩みありませんか？
+            </h2>
             <div class="problem-grid">
                 <div
                     v-for="(item, index) in problems"

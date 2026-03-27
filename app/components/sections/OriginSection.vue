@@ -23,7 +23,7 @@
                 </p>
             </div>
             <div class="origin-visual" data-aos="fade-left" data-aos-delay="100">
-                <img src="/assets/memokun.png" alt="メモくん" />
+                <img src="/assets/memokun.png" alt="メモくん" loading="lazy" />
                 <div class="origin-quote">
                     「ライが悪い時、どうすれば？」<br />
                     その答えを、あなた自身が<br />ここに積み重ねていく。

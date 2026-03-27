@@ -8,9 +8,10 @@
             >
                 <div class="hero-badge">Golf Swing Memo App</div>
                 <h1 class="hero-headline">
-                    ゴルフスイング中に<br />
+                    スイング中に<br />
                     <span class="accent"
-                        >「あれ、どうやって打つんだっけ？」</span
+                        >「あれ、どうやって<br />
+                        打つんだっけ？」</span
                     ><br />
                     を経験したあなたへ。
                 </h1>
@@ -48,6 +49,7 @@
                             <img
                                 src="/assets/screenshot_07.png"
                                 alt="MemoLie ゴルフ練習メモアプリ - 成長ログ画面"
+                                loading="eager"
                             />
                         </div>
                     </div>
@@ -58,6 +60,8 @@
                             <img
                                 src="/assets/screenshot_01.png"
                                 alt="MemoLie ゴルフ練習メモアプリ - ホーム画面"
+                                loading="eager"
+                                fetchpriority="high"
                             />
                         </div>
                     </div>
@@ -66,6 +70,7 @@
                     class="hero-memokun"
                     src="/assets/memokun.png"
                     alt="メモくん"
+                    loading="lazy"
                 />
             </div>
         </div>

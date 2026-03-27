@@ -4,7 +4,7 @@
         :style="{ boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.08)' : 'none' }"
     >
         <a href="#top" class="header-logo">
-            <img src="/assets/icon.png" alt="MemoLie" />
+            <img src="/assets/icon.png" alt="MemoLie" width="40" height="40" loading="lazy" />
             <span class="header-logo-name">MemoLie</span>
         </a>
         <nav class="header-nav">

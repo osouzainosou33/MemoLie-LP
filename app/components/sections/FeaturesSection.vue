@@ -2,7 +2,9 @@
     <section class="section features" id="features">
         <div class="section-inner">
             <p class="section-label" data-aos="fade-up">Features</p>
-            <h2 class="section-title" data-aos="fade-up">MemoLie でできること</h2>
+            <h2 class="section-title" data-aos="fade-up">
+                ゴルフ練習メモアプリ MemoLie でできること
+            </h2>
             <div
                 v-for="(feature, index) in features"
                 :key="index"
@@ -21,7 +23,7 @@
                 <div class="feature-screenshot">
                     <div class="tablet-frame">
                         <div class="tablet-screen">
-                            <img :src="feature.screenshot" :alt="feature.tag" />
+                            <img :src="feature.screenshot" :alt="feature.tag" loading="lazy" />
                         </div>
                     </div>
                 </div>
