@@ -82,6 +82,17 @@ export default defineNuxtConfig({
                 },
             ],
             script: [
+                // Google Analytics
+                {
+                    src: "https://www.googletagmanager.com/gtag/js?id=G-264LWRKMP9",
+                    async: true,
+                },
+                {
+                    innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-264LWRKMP9');`,
+                },
                 {
                     type: "application/ld+json",
                     innerHTML: JSON.stringify({
