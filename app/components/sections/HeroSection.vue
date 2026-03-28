@@ -24,6 +24,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         class="btn-primary"
+                        @click="trackClick"
                     >
                         <svg viewBox="0 0 24 24">
                             <path
@@ -76,3 +77,10 @@
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", { event_category: "cta", event_label: "hero_appstore" });
+}
+</script>
