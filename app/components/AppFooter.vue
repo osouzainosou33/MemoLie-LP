@@ -8,6 +8,7 @@
             <div class="footer-links">
                 <a href="/support">サポート</a>
                 <a href="/privacy-policy">プライバシーポリシー</a>
+                <a href="/terms-of-service">利用規約</a>
             </div>
             <div class="footer-copy">&copy; 2026 MemoLie</div>
         </div>

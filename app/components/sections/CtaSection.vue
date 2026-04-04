@@ -12,7 +12,7 @@
             今日の練習から、<br />記録を始めよう
         </h2>
         <p class="section-body" data-aos="fade-up">
-            無料ダウンロード。登録不要ですぐ使えます。
+            無料ダウンロード。メモや飛距離の記録は登録なしですぐ始められます。動画のクラウド保存はログイン後にご利用ください。
         </p>
         <div class="cta-actions" data-aos="fade-up">
             <a
@@ -29,7 +29,7 @@
                 </svg>
                 App Store で無料ダウンロード
             </a>
-            <span class="cta-note">iPhone対応 ・ 完全無料 ・ 登録不要</span>
+            <span class="cta-note">iPhone対応 ・ 基本無料 ・ メモは登録不要</span>
         </div>
     </section>
 </template>

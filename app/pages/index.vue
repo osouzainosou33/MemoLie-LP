@@ -4,7 +4,9 @@
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
+        <UseCasesSection />
         <FeaturesSection />
+        <PricingSection />
         <HowToSection />
         <TargetSection />
         <PrivacySection />

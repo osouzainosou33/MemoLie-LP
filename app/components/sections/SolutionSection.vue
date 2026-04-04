@@ -9,10 +9,10 @@
         />
         <p class="section-label" data-aos="fade-up">Solution</p>
         <h2 class="section-title" data-aos="fade-up">
-            自分だけのゴルフ攻略書を<br />スマホの中につくろう
+            気づきを、<br />次のスコアに変える
         </h2>
         <p class="section-body" data-aos="fade-up">
-            MemoLie は、スイングのコツや修正ポイントをクラブ別・シチュエーション別に整理できるメモアプリ。スコア管理より大切な「なぜ」を記録します。
+            自分だけのゴルフ攻略書をスマホの中に。MemoLie（メモリー）は「気づき」を蓄積して、スコアに変えるゴルフ専用メモアプリです。スコア管理より大切な「なぜ」と「どう直すか」を、クラブ別・シチュエーション別に残せます。
         </p>
         <div class="solution-cta" data-aos="fade-up">
             <a
@@ -29,7 +29,7 @@
                 </svg>
                 App Store で無料ダウンロード
             </a>
-            <span class="solution-note">iPhone対応 ・ 完全無料 ・ 登録不要</span>
+            <span class="solution-note">iPhone対応 ・ 基本無料 ・ メモは登録不要</span>
         </div>
     </section>
 </template>

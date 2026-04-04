@@ -6,17 +6,17 @@
                 data-aos="fade-right"
                 data-aos-duration="800"
             >
+                <p class="hero-kicker" data-aos="fade-right" data-aos-duration="600">
+                    「また同じミスをした」——そのくり返しを断ち切るために。
+                </p>
                 <div class="hero-badge">Golf Swing Memo App</div>
                 <h1 class="hero-headline">
-                    スイング中に<br />
-                    <span class="accent"
-                        >「あれ、どうやって<br />
-                        打つんだっけ？」</span
-                    ><br />
-                    を経験したあなたへ。
+                    練習場でつかんだ感覚、<br />
+                    コーチに言われたこと。<br />
+                    <span class="accent">それを次のラウンドで<br />活かせていますか？</span>
                 </h1>
                 <p class="hero-sub">
-                    クラブ別・シチュエーション別にスイングメモを整理。貴重な練習時間を、無駄にしないために。
+                    MemoLie（メモリー）は「気づき」を蓄積して、スコアに変えるゴルフ専用メモアプリです。クラブ別・シチュエーション別に整理し、スイング動画もメモと紐づけて保存できます。
                 </p>
                 <div class="hero-actions">
                     <a
@@ -34,7 +34,7 @@
                         App Store で無料ダウンロード
                     </a>
                     <span class="hero-note"
-                        >iPhone対応 ・ 完全無料 ・ 登録不要</span
+                        >iPhone対応 ・ 基本無料 ・ メモは登録不要</span
                     >
                 </div>
             </div>
@@ -48,8 +48,8 @@
                     <div class="device-frame">
                         <div class="device-screen">
                             <img
-                                src="/assets/screenshot_07.png"
-                                alt="MemoLie ゴルフ練習メモアプリ - 成長ログ画面"
+                                src="/assets/iphone-memolie-growth-log.png"
+                                alt="MemoLie 実機画面 - 成長ログ"
                                 loading="eager"
                             />
                         </div>
@@ -59,8 +59,8 @@
                     <div class="device-frame">
                         <div class="device-screen">
                             <img
-                                src="/assets/screenshot_01.png"
-                                alt="MemoLie ゴルフ練習メモアプリ - ホーム画面"
+                                src="/assets/iphone-memolie-home.png"
+                                alt="MemoLie 実機画面 - ホーム"
                                 loading="eager"
                                 fetchpriority="high"
                             />
@@ -84,3 +84,17 @@ function trackClick() {
     gtag("event", "click", { event_category: "cta", event_label: "hero_appstore" });
 }
 </script>
+
+<style scoped>
+.hero-kicker {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.55;
+    color: rgba(0, 0, 0, 0.72);
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    max-width: 420px;
+    border-left: 4px solid var(--black);
+    padding-left: 14px;
+}
+</style>

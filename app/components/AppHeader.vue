@@ -17,6 +17,8 @@
         </a>
         <nav class="header-nav">
             <a href="#features">機能</a>
+            <a href="#usecases">活用例</a>
+            <a href="#pricing">料金</a>
             <a href="#howto">使い方</a>
             <a href="#download" class="header-cta">無料ダウンロード</a>
         </nav>
