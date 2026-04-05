@@ -8,29 +8,28 @@
             <p class="section-body" data-aos="fade-up">
                 メモ・飛距離・成長ログなどのコア機能はログインなしで利用できます。スイング動画のクラウド保存は Google ログイン後に利用でき、無料枠では最大 3 本まで保存できます。
             </p>
-            <div class="pricing-grid" data-aos="fade-up">
-                <div class="pricing-card pricing-card--highlight">
-                    <span class="pricing-badge">Premium</span>
-                    <h3 class="pricing-name">プレミアム</h3>
-                    <p class="pricing-price">月額 ¥300（税別）</p>
-                    <ul class="pricing-list">
-                        <li>スイング動画の保存が無制限</li>
-                        <li>月額・年額・買い切りから選択可能</li>
-                        <li>いつでもストアから解約・管理</li>
-                    </ul>
-                    <p class="pricing-foot">
-                        表示価格・課金サイクルは App Store の購入画面が正です（例：月額 ¥300、年額 ¥3,000、買い切り ¥9,800）。
-                    </p>
+            <div class="pricing-card pricing-card--highlight" data-aos="fade-up">
+                <span class="pricing-badge">Premium</span>
+                <h3 class="pricing-name">プレミアム</h3>
+                <div class="pricing-plans">
+                    <div class="pricing-plan">
+                        <p class="pricing-plan-title">月額プラン</p>
+                        <p class="pricing-plan-price">¥300</p>
+                        <p class="pricing-plan-note">1日あたり約10円</p>
+                    </div>
+                    <div class="pricing-plan">
+                        <p class="pricing-plan-title">年額プラン</p>
+                        <p class="pricing-plan-price">¥3,000</p>
+                        <p class="pricing-plan-note">1日あたり約8円</p>
+                    </div>
                 </div>
-                <div class="pricing-card">
-                    <h3 class="pricing-name">無料</h3>
-                    <p class="pricing-price">¥0</p>
-                    <ul class="pricing-list">
-                        <li>クラブ・シチュエーション・フォームのメモ</li>
-                        <li>成長ログ・ミス記録</li>
-                        <li>動画のクラウド保存（最大 3 本・ログイン後）</li>
-                    </ul>
-                </div>
+                <ul class="pricing-list">
+                    <li>スイング動画の保存が無制限</li>
+                    <li>いつでもストアから解約・管理</li>
+                </ul>
+                <p class="pricing-foot">
+                    表示価格・課金サイクルは App Store の購入画面が正です。
+                </p>
             </div>
             <p class="pricing-legal" data-aos="fade-up">
                 サブスクリプションの自動更新、解約、返金は<a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener noreferrer">Apple メディアサービス利用規約</a>および App Store の設定に従います。詳細は<NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink>をご確認ください。
@@ -88,7 +87,43 @@
 .pricing-name {
     font-size: 18px;
     font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.pricing-plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.pricing-plan {
+    text-align: center;
+}
+
+.pricing-plan-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
     margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pricing-plan-price {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+    color: var(--black);
+}
+
+.pricing-plan-note {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
 }
 
 .pricing-price {
