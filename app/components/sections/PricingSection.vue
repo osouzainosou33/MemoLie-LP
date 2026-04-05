@@ -6,9 +6,16 @@
                 無料で始めて、<br />必要ならプレミアムへ
             </h2>
             <p class="section-body" data-aos="fade-up">
-                メモ・飛距離・成長ログなどのコア機能はログインなしで利用できます。スイング動画のクラウド保存は Google ログイン後に利用でき、無料枠では最大 3 本まで保存できます。
+                メモ・飛距離・成長ログなどのコア機能はログインなしで利用できます。
             </p>
-            <div class="pricing-premium" data-aos="fade-up">
+            <div class="pricing-plans-comparison" data-aos="fade-up">
+                <div class="pricing-card pricing-card--free">
+                    <h3 class="pricing-card-title">無料</h3>
+                    <p class="pricing-card-note">スイング動画のクラウド保存</p>
+                    <p class="pricing-card-highlight">最大 3 本まで</p>
+                    <p class="pricing-card-subtext">（Google ログイン後）</p>
+                </div>
+                <div class="pricing-premium" data-aos="fade-up">
                 <h3 class="pricing-premium-title">プレミアム</h3>
                 <div class="pricing-plans-grid">
                     <div class="pricing-card pricing-card--premium">
@@ -29,9 +36,10 @@
                 <p class="pricing-foot pricing-foot--premium">
                     表示価格・課金サイクルは App Store の購入画面が正です。
                 </p>
+                </div>
             </div>
             <p class="pricing-legal" data-aos="fade-up">
-                サブスクリプションの自動更新、解約、返金は<a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener noreferrer">Apple メディアサービス利用規約</a>および App Store の設定に従います。詳細は<NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink>をご確認ください。
+                サブスクリプションの自動更新、解約、返金は<a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener noreferrer">Apple メディアサービス利用規約</a>および App Store の設定に従います。詳細は <NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink> をご確認ください。
             </p>
         </div>
     </section>
@@ -56,6 +64,9 @@
     .pricing-grid {
         grid-template-columns: 1fr;
     }
+    .pricing-plans-comparison {
+        grid-template-columns: 1fr;
+    }
 }
 
 .pricing-card {
@@ -64,6 +75,50 @@
     border-radius: 16px;
     padding: 28px 24px;
     position: relative;
+}
+
+.pricing-plans-comparison {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.pricing-card--free {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricing-card-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.pricing-card-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.pricing-card-highlight {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--black);
+    margin-bottom: 4px;
+}
+
+.pricing-card-subtext {
+    font-size: 12px;
+    color: var(--muted);
 }
 
 .pricing-premium {
@@ -125,6 +180,12 @@
     margin-bottom: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.pricing-list--premium li {
+    margin-bottom: 12px;
 }
 
 .pricing-list--premium li::before {
