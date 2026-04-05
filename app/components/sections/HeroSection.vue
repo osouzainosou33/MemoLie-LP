@@ -6,14 +6,18 @@
                 data-aos="fade-right"
                 data-aos-duration="800"
             >
-                <p class="hero-kicker" data-aos="fade-right" data-aos-duration="600">
+                <!-- <p
+                    class="hero-kicker"
+                    data-aos="fade-right"
+                    data-aos-duration="600"
+                >
                     スイング中に「あれ、どうやって打つんだっけ？」ってなったあなたへ。
-                </p>
+                </p> -->
                 <div class="hero-badge">Golf Swing Memo App</div>
                 <h1 class="hero-headline">
-                    練習場でつかんだ感覚、<br />
-                    コーチに言われたこと。<br />
-                    <span class="accent">だからこそ、コースで<br />再現したい。</span>
+                    練習はしているのに<br />
+                    <span class="accent">スコアが伸びない<br /> </span>
+                    そんなあなたへ
                 </h1>
                 <p class="hero-sub">
                     MemoLie（メモリー）は「気づき」を蓄積して、スコアに変えるゴルフ専用メモアプリです。クラブ別・シチュエーション別に整理し、スイング動画もメモと紐づけて保存できます。
@@ -81,7 +85,10 @@
 <script setup lang="ts">
 declare const gtag: (...args: unknown[]) => void;
 function trackClick() {
-    gtag("event", "click", { event_category: "cta", event_label: "hero_appstore" });
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "hero_appstore",
+    });
 }
 </script>
 

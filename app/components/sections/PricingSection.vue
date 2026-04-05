@@ -8,26 +8,25 @@
             <p class="section-body" data-aos="fade-up">
                 メモ・飛距離・成長ログなどのコア機能はログインなしで利用できます。スイング動画のクラウド保存は Google ログイン後に利用でき、無料枠では最大 3 本まで保存できます。
             </p>
-            <div class="pricing-card pricing-card--highlight" data-aos="fade-up">
-                <span class="pricing-badge">Premium</span>
-                <h3 class="pricing-name">プレミアム</h3>
-                <div class="pricing-plans">
-                    <div class="pricing-plan">
+            <div class="pricing-premium" data-aos="fade-up">
+                <h3 class="pricing-premium-title">プレミアム</h3>
+                <div class="pricing-plans-grid">
+                    <div class="pricing-card pricing-card--premium">
                         <p class="pricing-plan-title">月額プラン</p>
                         <p class="pricing-plan-price">¥300</p>
                         <p class="pricing-plan-note">1日あたり約10円</p>
                     </div>
-                    <div class="pricing-plan">
+                    <div class="pricing-card pricing-card--premium">
                         <p class="pricing-plan-title">年額プラン</p>
                         <p class="pricing-plan-price">¥3,000</p>
                         <p class="pricing-plan-note">1日あたり約8円</p>
                     </div>
                 </div>
-                <ul class="pricing-list">
+                <ul class="pricing-list pricing-list--premium">
                     <li>スイング動画の保存が無制限</li>
                     <li>いつでもストアから解約・管理</li>
                 </ul>
-                <p class="pricing-foot">
+                <p class="pricing-foot pricing-foot--premium">
                     表示価格・課金サイクルは App Store の購入画面が正です。
                 </p>
             </div>
@@ -67,63 +66,75 @@
     position: relative;
 }
 
-.pricing-card--highlight {
-    background: var(--white);
-    border: 2px solid var(--black);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+.pricing-premium {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    padding: 40px 32px;
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
 }
 
-.pricing-badge {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    font-size: 10px;
+.pricing-premium-title {
+    font-size: 24px;
     font-weight: 900;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--yellow-dark);
+    color: var(--white);
+    margin-bottom: 32px;
+    text-align: center;
 }
 
-.pricing-name {
-    font-size: 18px;
-    font-weight: 900;
-    margin-bottom: 24px;
-}
-
-.pricing-plans {
+.pricing-plans-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--border);
+    gap: 24px;
+    margin-bottom: 32px;
 }
 
-.pricing-plan {
+.pricing-card--premium {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px 16px;
     text-align: center;
 }
 
 .pricing-plan-title {
     font-size: 12px;
     font-weight: 700;
-    color: var(--muted);
-    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .pricing-plan-price {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 900;
     letter-spacing: -0.02em;
-    margin-bottom: 4px;
-    color: var(--black);
+    margin-bottom: 6px;
+    color: var(--white);
 }
 
 .pricing-plan-note {
     font-size: 12px;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.5);
     line-height: 1.5;
+}
+
+.pricing-list--premium {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-list--premium li::before {
+    background: var(--yellow);
+}
+
+.pricing-foot--premium {
+    color: rgba(255, 255, 255, 0.5);
+    border-top: none;
+    padding-top: 0;
 }
 
 .pricing-price {
