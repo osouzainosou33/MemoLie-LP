@@ -49,7 +49,7 @@
 
 <style scoped>
 .pricing {
-    background: var(--gray);
+    background: var(--black);
 }
 
 .pricing-grid {
@@ -57,7 +57,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     margin-top: 40px;
-    max-width: 920px;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -150,13 +150,25 @@
     max-width: 720px;
     font-size: 12px;
     line-height: 1.75;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .pricing-legal a {
-    color: var(--black);
+    color: var(--white);
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+.pricing :deep(.section-label) {
+    color: var(--yellow);
+}
+
+.pricing :deep(.section-title) {
+    color: var(--white);
+}
+
+.pricing :deep(.section-body) {
+    color: rgba(255, 255, 255, 0.8);
 }
 </style>

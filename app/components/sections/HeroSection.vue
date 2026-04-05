@@ -7,7 +7,7 @@
                 data-aos-duration="800"
             >
                 <p class="hero-kicker" data-aos="fade-right" data-aos-duration="600">
-                    「また同じミスをした」——そのくり返しを断ち切るために。
+                    気づきを、スコアに変える。
                 </p>
                 <div class="hero-badge">Golf Swing Memo App</div>
                 <h1 class="hero-headline">

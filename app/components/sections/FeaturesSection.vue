@@ -42,8 +42,8 @@ const features = [
         title: 'スイング動画を<br>クラブ・シチュに紐づけて保存',
         body: '練習の様子を動画で残し、いつでも見返せます。クラウド保存は Google ログイン後。無料で最大 3 本まで、プレミアムで無制限です。',
         points: ['各メモ画面からアップロード', '30 秒以内の動画に対応', 'プレミアムは月額・年額・買い切りから選択'],
-        screenshot: '/assets/iphone-memolie-mypage.png',
-        alt: 'MemoLie 実機 - マイページ（保存済み動画）',
+        screenshot: '/assets/1.1driver.png',
+        alt: 'MemoLie - スイング動画保存',
     },
     {
         tag: 'Base Form',
