@@ -16,30 +16,40 @@
                     <p class="pricing-card-subtext">（Google ログイン後）</p>
                 </div>
                 <div class="pricing-premium" data-aos="fade-up">
-                <h3 class="pricing-premium-title">プレミアム</h3>
-                <div class="pricing-plans-grid">
-                    <div class="pricing-card pricing-card--premium">
-                        <p class="pricing-plan-title">月額プラン</p>
-                        <p class="pricing-plan-price">¥300</p>
-                        <p class="pricing-plan-note">1日あたり約10円</p>
+                    <h3 class="pricing-premium-title">プレミアム</h3>
+                    <div class="pricing-plans-grid">
+                        <div class="pricing-card pricing-card--premium">
+                            <p class="pricing-plan-title">月額プラン</p>
+                            <p class="pricing-plan-price">¥300</p>
+                            <p class="pricing-plan-note">1日あたり約10円</p>
+                        </div>
+                        <div class="pricing-card pricing-card--premium">
+                            <p class="pricing-plan-title">年額プラン</p>
+                            <p class="pricing-plan-price">¥3,000</p>
+                            <p class="pricing-plan-note">1日あたり約8円</p>
+                        </div>
                     </div>
-                    <div class="pricing-card pricing-card--premium">
-                        <p class="pricing-plan-title">年額プラン</p>
-                        <p class="pricing-plan-price">¥3,000</p>
-                        <p class="pricing-plan-note">1日あたり約8円</p>
-                    </div>
-                </div>
-                <ul class="pricing-list pricing-list--premium">
-                    <li>スイング動画の保存が無制限</li>
-                    <li>いつでもストアから解約・管理</li>
-                </ul>
-                <p class="pricing-foot pricing-foot--premium">
-                    表示価格・課金サイクルは App Store の購入画面が正です。
-                </p>
+                    <ul class="pricing-list pricing-list--premium">
+                        <li>スイング動画の保存が無制限</li>
+                        <li>いつでもストアから解約・管理</li>
+                    </ul>
+                    <p class="pricing-foot pricing-foot--premium">
+                        表示価格・課金サイクルは App Store の購入画面が正です。
+                    </p>
                 </div>
             </div>
             <p class="pricing-legal" data-aos="fade-up">
-                サブスクリプションの自動更新、解約、返金は<a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener noreferrer">Apple メディアサービス利用規約</a>および App Store の設定に従います。詳細は <NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink> をご確認ください。
+                サブスクリプションの自動更新、解約、返金は<a
+                    href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Apple メディアサービス利用規約</a
+                >および App Store の設定に従います。詳細は
+                <NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink
+                    to="/privacy-policy"
+                    >プライバシーポリシー</NuxtLink
+                >
+                をご確認ください。
             </p>
         </div>
     </section>
@@ -249,7 +259,7 @@
 
 .pricing-legal {
     margin-top: 32px;
-    max-width: 720px;
+    max-width: 1000px;
     font-size: 12px;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.6);
