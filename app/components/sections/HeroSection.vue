@@ -7,7 +7,7 @@
                 data-aos-duration="800"
             >
                 <p class="hero-kicker" data-aos="fade-right" data-aos-duration="600">
-                    練習で気づいたことが、コースで活かせていない。その悔しさを解決します。
+                    スイング中に「あれ、どうやって打つんだっけ？」ってなったあなたへ。
                 </p>
                 <div class="hero-badge">Golf Swing Memo App</div>
                 <h1 class="hero-headline">

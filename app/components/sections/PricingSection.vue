@@ -9,19 +9,10 @@
                 メモ・飛距離・成長ログなどのコア機能はログインなしで利用できます。スイング動画のクラウド保存は Google ログイン後に利用でき、無料枠では最大 3 本まで保存できます。
             </p>
             <div class="pricing-grid" data-aos="fade-up">
-                <div class="pricing-card">
-                    <h3 class="pricing-name">無料</h3>
-                    <p class="pricing-price">¥0</p>
-                    <ul class="pricing-list">
-                        <li>クラブ・シチュエーション・フォームのメモ</li>
-                        <li>成長ログ・ミス記録</li>
-                        <li>動画のクラウド保存（最大 3 本・ログイン後）</li>
-                    </ul>
-                </div>
                 <div class="pricing-card pricing-card--highlight">
                     <span class="pricing-badge">Premium</span>
                     <h3 class="pricing-name">プレミアム</h3>
-                    <p class="pricing-price-note">アプリ内で価格を表示</p>
+                    <p class="pricing-price">月額 ¥300（税別）</p>
                     <ul class="pricing-list">
                         <li>スイング動画の保存が無制限</li>
                         <li>月額・年額・買い切りから選択可能</li>
@@ -31,9 +22,18 @@
                         表示価格・課金サイクルは App Store の購入画面が正です（例：月額 ¥300、年額 ¥3,000、買い切り ¥9,800）。
                     </p>
                 </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-name">無料</h3>
+                    <p class="pricing-price">¥0</p>
+                    <ul class="pricing-list">
+                        <li>クラブ・シチュエーション・フォームのメモ</li>
+                        <li>成長ログ・ミス記録</li>
+                        <li>動画のクラウド保存（最大 3 本・ログイン後）</li>
+                    </ul>
+                </div>
             </div>
             <p class="pricing-legal" data-aos="fade-up">
-                サブスクリプションの自動更新・解約・返金は、<a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener noreferrer">Apple メディアサービス利用規約</a>および App Store の設定に従います。詳細は<NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink>をご確認ください。
+                サブスクリプションの自動更新、解約、返金は<a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener noreferrer">Apple メディアサービス利用規約</a>および App Store の設定に従います。詳細は<NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink>をご確認ください。
             </p>
         </div>
     </section>
@@ -69,10 +69,9 @@
 }
 
 .pricing-card--highlight {
-    background: var(--black);
-    border: 2px solid var(--white);
-    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
-    color: var(--white);
+    background: var(--white);
+    border: 2px solid var(--black);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-badge {
@@ -104,27 +103,6 @@
     font-weight: 700;
     color: var(--muted);
     margin-bottom: 20px;
-}
-
-.pricing-card--highlight .pricing-name {
-    color: var(--white);
-}
-
-.pricing-card--highlight .pricing-price-note {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.pricing-card--highlight .pricing-list {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.pricing-card--highlight .pricing-list li::before {
-    background: var(--yellow);
-}
-
-.pricing-card--highlight .pricing-foot {
-    color: rgba(255, 255, 255, 0.6);
-    border-top-color: rgba(255, 255, 255, 0.2);
 }
 
 .pricing-list {
