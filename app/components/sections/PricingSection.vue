@@ -33,13 +33,7 @@
                 </div>
             </div>
             <p class="pricing-legal" data-aos="fade-up">
-                サブスクリプションの自動更新・解約・返金は、<a
-                    href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Apple メディアサービス利用規約</a
-                >および App Store の設定に従います。詳細は
-                <NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink>をご確認ください。
+                サブスクリプションの自動更新・解約・返金は、<a href="https://www.apple.com/legal/internet-services/itunes/jp/terms.html" target="_blank" rel="noopener noreferrer">Apple メディアサービス利用規約</a>および App Store の設定に従います。詳細は<NuxtLink to="/terms-of-service">利用規約</NuxtLink>・<NuxtLink to="/privacy-policy">プライバシーポリシー</NuxtLink>をご確認ください。
             </p>
         </div>
     </section>
@@ -75,8 +69,10 @@
 }
 
 .pricing-card--highlight {
-    border-color: var(--black);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    background: var(--black);
+    border: 2px solid var(--white);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
+    color: var(--white);
 }
 
 .pricing-badge {
@@ -108,6 +104,27 @@
     font-weight: 700;
     color: var(--muted);
     margin-bottom: 20px;
+}
+
+.pricing-card--highlight .pricing-name {
+    color: var(--white);
+}
+
+.pricing-card--highlight .pricing-price-note {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.pricing-card--highlight .pricing-list {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.pricing-card--highlight .pricing-list li::before {
+    background: var(--yellow);
+}
+
+.pricing-card--highlight .pricing-foot {
+    color: rgba(255, 255, 255, 0.6);
+    border-top-color: rgba(255, 255, 255, 0.2);
 }
 
 .pricing-list {

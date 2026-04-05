@@ -7,13 +7,13 @@
                 data-aos-duration="800"
             >
                 <p class="hero-kicker" data-aos="fade-right" data-aos-duration="600">
-                    気づきを、スコアに変える。
+                    練習で気づいたことが、コースで活かせていない。その悔しさを解決します。
                 </p>
                 <div class="hero-badge">Golf Swing Memo App</div>
                 <h1 class="hero-headline">
                     練習場でつかんだ感覚、<br />
                     コーチに言われたこと。<br />
-                    <span class="accent">それを次のラウンドで<br />活かせていますか？</span>
+                    <span class="accent">だからこそ、コースで<br />再現したい。</span>
                 </h1>
                 <p class="hero-sub">
                     MemoLie（メモリー）は「気づき」を蓄積して、スコアに変えるゴルフ専用メモアプリです。クラブ別・シチュエーション別に整理し、スイング動画もメモと紐づけて保存できます。
