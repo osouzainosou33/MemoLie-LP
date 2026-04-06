@@ -150,6 +150,12 @@
 <script setup lang="ts">
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
+
+useHead({
+    title: "プライバシーポリシー | MemoLie（メモリー）",
+    meta: [{ name: "description", content: "MemoLie（メモリー）のプライバシーポリシー。取得する情報、利用目的、第三者提供、データの取り扱いについてご説明します。" }],
+    link: [{ rel: "canonical", href: "https://memolie.app/privacy-policy" }],
+});
 </script>
 
 <style scoped>

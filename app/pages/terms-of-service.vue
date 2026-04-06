@@ -95,6 +95,12 @@
 <script setup lang="ts">
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
+
+useHead({
+    title: "利用規約 | MemoLie（メモリー）",
+    meta: [{ name: "description", content: "MemoLie（メモリー）の利用規約。本アプリの利用条件、禁止事項、免責事項等についてご確認ください。" }],
+    link: [{ rel: "canonical", href: "https://memolie.app/terms-of-service" }],
+});
 </script>
 
 <style scoped>

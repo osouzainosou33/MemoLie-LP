@@ -19,6 +19,10 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+useHead({
+    link: [{ rel: "canonical", href: "https://memolie.app/" }],
+});
+
 onMounted(() => {
     AOS.init({ duration: 700, once: true, offset: 60 });
 });

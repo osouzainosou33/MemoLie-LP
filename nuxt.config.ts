@@ -66,7 +66,6 @@ export default defineNuxtConfig({
                 },
             ],
             link: [
-                { rel: "canonical", href: "https://memolie.app" },
                 { rel: "preconnect", href: "https://fonts.googleapis.com" },
                 { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
                 {
