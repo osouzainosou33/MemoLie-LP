@@ -16,7 +16,7 @@
         </p>
         <div class="cta-actions" data-aos="fade-up">
             <a
-                href="https://apps.apple.com/jp/app/memolie/id6760087461"
+                :href="appStoreUrl"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-primary"
@@ -35,6 +35,10 @@
 </template>
 
 <script setup lang="ts">
+import { APP_CONFIG } from "../../config";
+
+const appStoreUrl = APP_CONFIG.APP_STORE_URL;
+
 declare const gtag: (...args: unknown[]) => void;
 function trackClick() {
     gtag("event", "click", { event_category: "cta", event_label: "cta_appstore" });
