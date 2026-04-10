@@ -47,7 +47,14 @@
                     </p>
 
                     <div class="callout">
-                        <div class="callout-icon">⚠️</div>
+                        <div class="callout-icon">
+                            <!-- warning -->
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2L18.66 17H1.34L10 2Z" stroke="#D97706" stroke-width="1.5" stroke-linejoin="round" fill="#FEF3C7"/>
+                                <path d="M10 8V11" stroke="#D97706" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="10" cy="13.5" r="0.75" fill="#D97706"/>
+                            </svg>
+                        </div>
                         <div class="callout-text">
                             <strong>よくある失敗パターン</strong><br>
                             ノートに気づきをランダムに書き続ける → ドライバーのコツとアプローチのコツが混在 →
@@ -118,7 +125,13 @@
                     </p>
 
                     <div class="callout green">
-                        <div class="callout-icon">✅</div>
+                        <div class="callout-icon">
+                            <!-- check -->
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="#B5CE3A" stroke="#4A5C0A" stroke-width="1"/>
+                                <path d="M6 10L9 13L14 7.5" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div class="callout-text">
                             <strong>ミスメモの書き方</strong><br>
                             【ミス】〇〇 → 【原因】△△ → 【対策】□□<br>
@@ -145,28 +158,54 @@
 
                     <div class="feature-list">
                         <div class="feature-item">
-                            <span class="feature-icon">🏌️</span>
+                            <div class="feature-icon">
+                                <!-- golf club -->
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="14" width="8" height="6" rx="2" fill="#B5CE3A"/>
+                                    <line x1="6" y1="14" x2="6" y2="3" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"/>
+                                    <line x1="6" y1="3" x2="18" y2="6" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round"/>
+                                </svg>
+                            </div>
                             <div>
                                 <p class="feature-name">クラブ別メモ</p>
                                 <p class="feature-desc">ドライバーからパターまで、クラブごとにスイングのコツを管理できます</p>
                             </div>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon">📍</span>
+                            <div class="feature-icon">
+                                <!-- map pin -->
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 2C8.24 2 6 4.24 6 7C6 10.5 11 18 11 18C11 18 16 10.5 16 7C16 4.24 13.76 2 11 2Z" fill="#B5CE3A" stroke="#4A5C0A" stroke-width="1"/>
+                                    <circle cx="11" cy="7" r="2" fill="#1C1C1E"/>
+                                </svg>
+                            </div>
                             <div>
                                 <p class="feature-name">シチュエーション別メモ</p>
                                 <p class="feature-desc">ラフ・バンカー・傾斜など、場面ごとの対策を整理できます</p>
                             </div>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon">⚠️</span>
+                            <div class="feature-icon">
+                                <!-- warning triangle -->
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 3L20 19H2L11 3Z" fill="#FEF3C7" stroke="#D97706" stroke-width="1.2" stroke-linejoin="round"/>
+                                    <path d="M11 9V13" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/>
+                                    <circle cx="11" cy="15.5" r="0.8" fill="#D97706"/>
+                                </svg>
+                            </div>
                             <div>
                                 <p class="feature-name">ミスメモ</p>
                                 <p class="feature-desc">ミスと対策をセットで記録。同じ失敗を繰り返さない仕組み</p>
                             </div>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon">📈</span>
+                            <div class="feature-icon">
+                                <!-- trending up -->
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="2,16 8,10 13,14 20,6" stroke="#B5CE3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    <polyline points="15,6 20,6 20,11" stroke="#B5CE3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                </svg>
+                            </div>
                             <div>
                                 <p class="feature-name">成長ログ</p>
                                 <p class="feature-desc">メモの変更履歴がタイムラインで確認できます</p>
@@ -240,7 +279,7 @@ useHead({
 }
 
 .blog-main {
-    padding: 60px 20px 80px;
+    padding: 100px 20px 80px;
     background: #fff;
 }
 
@@ -371,9 +410,13 @@ useHead({
 }
 
 .callout-icon {
-    font-size: 20px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
     margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .callout-text {
@@ -430,7 +473,13 @@ useHead({
 }
 
 .feature-icon {
-    font-size: 24px;
+    width: 44px;
+    height: 44px;
+    background: #F0F4DA;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
 }
 
@@ -508,7 +557,7 @@ useHead({
 /* レスポンシブ */
 @media (max-width: 768px) {
     .blog-main {
-        padding: 40px 16px 60px;
+        padding: 88px 16px 60px;
     }
 
     .article-title {
