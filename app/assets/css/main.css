@@ -140,14 +140,13 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 .hero-text {
     position: relative;
     z-index: 1;
+    max-width: 680px;
 }
 .hero-badge {
     display: inline-flex;
@@ -226,43 +225,15 @@ body {
     color: rgba(0, 0, 0, 0.5);
     font-weight: 700;
 }
-.hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    min-height: 560px;
-}
-.hero-device {
-    width: 260px;
-    position: relative;
-    z-index: 2;
-}
-.device-frame {
-    background: var(--black);
-    border-radius: 28px;
-    padding: 10px;
-    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.25);
-}
-.device-screen {
-    border-radius: 20px;
-    overflow: hidden;
-    display: block;
-    width: 100%;
-}
-.device-screen img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 .hero-memokun {
     position: absolute;
-    bottom: 10px;
-    right: -20px;
-    width: 160px;
-    z-index: 3;
+    bottom: 0;
+    right: 0;
+    width: clamp(200px, 22vw, 320px);
+    z-index: 0;
     animation: float 3s ease-in-out infinite;
-    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.18));
+    pointer-events: none;
 }
 @keyframes float {
     0%,
@@ -270,42 +241,12 @@ body {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-12px);
+        transform: translateY(-14px);
     }
-}
-.hero-sub-device {
-    position: absolute;
-    top: -80px;
-    left: 320px;
-    width: 150px;
-    z-index: 1;
-    opacity: 0.85;
-    transform: perspective(1200px) rotateY(15deg) rotateX(-5deg);
-}
-.hero-sub-device .device-frame {
-    border-radius: 20px;
-    padding: 8px;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
-}
-.hero-sub-device .device-screen {
-    border-radius: 14px;
 }
 @media (max-width: 768px) {
-    .hero-inner {
-        grid-template-columns: 1fr;
-    }
-    .hero-visual {
-        min-height: 380px;
-    }
-    .hero-device {
-        width: 200px;
-    }
     .hero-memokun {
-        width: 120px;
-        right: 0;
-    }
-    .hero-sub-device {
-        display: none;
+        width: clamp(140px, 40vw, 200px);
     }
 }
 

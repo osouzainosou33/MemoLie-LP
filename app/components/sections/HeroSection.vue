@@ -42,43 +42,16 @@
                     >
                 </div>
             </div>
-            <div
-                class="hero-visual"
-                data-aos="fade-left"
-                data-aos-duration="800"
-                data-aos-delay="150"
-            >
-                <div class="hero-sub-device">
-                    <div class="device-frame">
-                        <div class="device-screen">
-                            <img
-                                src="/assets/iphone-memolie-growth-log.png"
-                                alt="MemoLie 実機画面 - 成長ログ"
-                                loading="eager"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-device">
-                    <div class="device-frame">
-                        <div class="device-screen">
-                            <img
-                                src="/assets/iphone-memolie-home.png"
-                                alt="MemoLie 実機画面 - ホーム"
-                                loading="eager"
-                                fetchpriority="high"
-                            />
-                        </div>
-                    </div>
-                </div>
-                <img
-                    class="hero-memokun"
-                    src="/assets/memokun.png"
-                    alt="メモくん"
-                    loading="lazy"
-                />
-            </div>
         </div>
+        <img
+            class="hero-memokun"
+            src="/assets/memokun.png"
+            alt="メモくん"
+            loading="lazy"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200"
+        />
     </section>
 </template>
 
