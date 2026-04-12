@@ -72,10 +72,17 @@
 
 @media (max-width: 768px) {
     .pricing-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
     .pricing-plans-comparison {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
+    }
+    .pricing-premium {
+        order: 1;
+    }
+    .pricing-card--free {
+        order: 2;
     }
 }
 
@@ -95,8 +102,8 @@
 }
 
 .pricing-card--free {
-    background: var(--white);
-    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 16px;
     padding: 32px 24px;
     text-align: center;
@@ -108,13 +115,13 @@
 .pricing-card-title {
     font-size: 20px;
     font-weight: 900;
-    color: var(--black);
+    color: var(--white);
     margin-bottom: 16px;
 }
 
 .pricing-card-note {
     font-size: 13px;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 8px;
     line-height: 1.5;
 }
@@ -122,27 +129,27 @@
 .pricing-card-highlight {
     font-size: 24px;
     font-weight: 900;
-    color: var(--black);
+    color: var(--white);
     margin-bottom: 4px;
 }
 
 .pricing-card-subtext {
     font-size: 12px;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .pricing-premium {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-    border: 2px solid var(--white);
+    background: var(--white);
+    border: 2px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     padding: 40px 32px;
-    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-premium-title {
     font-size: 24px;
     font-weight: 900;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 32px;
     text-align: center;
 }
@@ -155,8 +162,8 @@
 }
 
 .pricing-card--premium {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     padding: 20px 16px;
     text-align: center;
@@ -165,7 +172,7 @@
 .pricing-plan-title {
     font-size: 12px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.5);
     margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -176,20 +183,20 @@
     font-weight: 900;
     letter-spacing: -0.02em;
     margin-bottom: 6px;
-    color: var(--white);
+    color: var(--black);
 }
 
 .pricing-plan-note {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.45);
     line-height: 1.5;
 }
 
 .pricing-list--premium {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--black);
     margin-bottom: 24px;
     padding-bottom: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 15px;
     line-height: 1.8;
 }
@@ -203,7 +210,7 @@
 }
 
 .pricing-foot--premium {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.45);
     border-top: none;
     padding-top: 0;
 }

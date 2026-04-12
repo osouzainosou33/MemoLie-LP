@@ -104,13 +104,15 @@ body {
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
+    align-items: center;
+    gap: 6px;
 }
 @media (max-width: 600px) {
     .header-nav {
         display: none;
     }
     .header-cta-mobile {
-        display: block;
+        display: inline-flex;
     }
 }
 
