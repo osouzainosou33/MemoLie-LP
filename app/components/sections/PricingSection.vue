@@ -163,7 +163,7 @@
 
 .pricing-card--premium {
     background: rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.04);
     border-radius: 12px;
     padding: 20px 16px;
     text-align: center;
