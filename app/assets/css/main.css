@@ -169,7 +169,7 @@ body {
     background: var(--black);
 }
 .hero-headline {
-    font-size: clamp(52px, 9vw, 80px);
+    font-size: clamp(36px, 9vw, 80px);
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: -0.5px;
@@ -183,7 +183,7 @@ body {
     border-radius: 4px;
 }
 .hero-sub {
-    font-size: 16px;
+    font-size: clamp(12px, 3vw, 16px);
     color: rgba(0, 0, 0, 0.65);
     line-height: 1.8;
     margin-bottom: 36px;
@@ -230,7 +230,7 @@ body {
     bottom: 0;
     right: 0;
     width: clamp(200px, 22vw, 320px);
-    z-index: 0;
+    z-index: 2;
     animation: float 3s ease-in-out infinite;
     filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.18));
     pointer-events: none;

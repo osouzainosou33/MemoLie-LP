@@ -80,9 +80,14 @@
     }
     .pricing-premium {
         order: 1;
+        padding: 28px 20px;
     }
     .pricing-card--free {
         order: 2;
+    }
+    .pricing-plans-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
     }
 }
 
