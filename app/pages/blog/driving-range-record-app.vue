@@ -259,6 +259,7 @@
                 </div>
 
             </article>
+            <BlogRelatedArticles current-slug="driving-range-record-app" />
         </main>
 
         <AppFooter />
@@ -268,6 +269,7 @@
 <script setup lang="ts">
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
+import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
 useHead({
     title: "打ちっぱなしの記録に使えるアプリ｜練習を確実に次につなげる方法 | MemoLie",

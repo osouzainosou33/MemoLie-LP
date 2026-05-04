@@ -260,6 +260,7 @@
                 </div>
 
             </article>
+            <BlogRelatedArticles current-slug="simulation-golf-not-improving" />
         </main>
 
         <AppFooter />
@@ -269,6 +270,7 @@
 <script setup lang="ts">
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
+import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
 useHead({
     title: "シミュレーションゴルフで上達しない人に共通する3つの原因 | MemoLie",

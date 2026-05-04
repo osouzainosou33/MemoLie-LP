@@ -250,6 +250,7 @@
                 </div>
 
             </article>
+            <BlogRelatedArticles current-slug="golf-swing-memo" />
         </main>
 
         <AppFooter />
@@ -259,6 +260,7 @@
 <script setup lang="ts">
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
+import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
 useHead({
     title: "ゴルフスイングのメモの残し方｜上達する人が実践している3つのコツ | MemoLie",

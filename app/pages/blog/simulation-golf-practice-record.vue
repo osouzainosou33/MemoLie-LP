@@ -259,6 +259,7 @@
                 </div>
 
             </article>
+            <BlogRelatedArticles current-slug="simulation-golf-practice-record" />
         </main>
 
         <AppFooter />
@@ -268,6 +269,7 @@
 <script setup lang="ts">
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
+import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
 useHead({
     title: "シミュレーション練習を記録する方法｜上達につながるメモの残し方 | MemoLie",
