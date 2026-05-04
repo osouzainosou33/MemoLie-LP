@@ -5,7 +5,7 @@
             boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.08)' : 'none',
         }"
     >
-        <a href="#top" class="header-logo">
+        <a :href="isHome ? '#top' : '/'" class="header-logo">
             <img
                 src="/assets/icon.png"
                 alt="MemoLie"
@@ -16,10 +16,10 @@
             <span class="header-logo-name">MemoLie</span>
         </a>
         <nav class="header-nav">
-            <a href="#features">機能</a>
-            <a href="#usecases">活用例</a>
-            <a href="#pricing">料金</a>
-            <a href="#howto">使い方</a>
+            <a :href="navLink('#features')">機能</a>
+            <a :href="navLink('#usecases')">活用例</a>
+            <a :href="navLink('#pricing')">料金</a>
+            <a :href="navLink('#howto')">使い方</a>
             <a href="/blog" class="header-blog">ブログ</a>
             <a :href="appStoreUrl" target="_blank" rel="noopener noreferrer" class="header-cta">
                 <svg class="header-cta-icon" viewBox="0 0 24 24">
@@ -38,11 +38,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import { useRoute } from "vue-router";
 import { APP_CONFIG } from "../config";
 
 const scrolled = ref(false);
 const appStoreUrl = APP_CONFIG.APP_STORE_URL;
+const route = useRoute();
+
+// トップページかどうか
+const isHome = computed(() => route.path === "/");
+
+// トップページなら #hash のまま、他ページなら /#hash にする
+function navLink(hash: string): string {
+    return isHome.value ? hash : `/${hash}`;
+}
 
 function handleScroll() {
     scrolled.value = window.scrollY > 40;
