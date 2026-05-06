@@ -4,7 +4,7 @@
             <p class="section-label" style="text-align: center" data-aos="fade-up">
                 How to Use
             </p>
-            <h2 class="section-title" style="text-align: center" data-aos="fade-up">
+            <h2 class="section-title no-wrap-mobile" style="text-align: center" data-aos="fade-up">
                 3ステップで<br />ゴルフ上達・スコアアップへ
             </h2>
             <div class="steps-grid">

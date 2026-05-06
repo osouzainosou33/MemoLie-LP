@@ -2,7 +2,7 @@
     <section class="section pricing" id="pricing">
         <div class="section-inner">
             <p class="section-label" data-aos="fade-up">Plans</p>
-            <h2 class="section-title" data-aos="fade-up">
+            <h2 class="section-title no-wrap-mobile" data-aos="fade-up">
                 無料で始めて、<br />必要ならプレミアムへ
             </h2>
             <p class="section-body" data-aos="fade-up">
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <ul class="pricing-list pricing-list--premium">
-                        <li>スイング動画の保存が無制限</li>
+                        <li>スイング動画の保存が<strong class="pricing-unlimited">無制限に</strong></li>
                         <li>いつでもストアから解約・管理</li>
                     </ul>
                     <p class="pricing-foot pricing-foot--premium">
@@ -101,7 +101,7 @@
 
 .pricing-plans-comparison {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(280px, 1fr) 2fr;
     gap: 24px;
     margin-top: 40px;
 }
@@ -195,6 +195,11 @@
     font-size: 12px;
     color: rgba(0, 0, 0, 0.45);
     line-height: 1.5;
+}
+
+.pricing-unlimited {
+    color: #c0392b;
+    font-weight: 900;
 }
 
 .pricing-list--premium {

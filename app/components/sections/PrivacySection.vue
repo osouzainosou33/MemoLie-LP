@@ -2,7 +2,7 @@
     <section class="privacy">
         <div class="privacy-inner">
             <p class="section-label light" data-aos="fade-up">Privacy First</p>
-            <h2 class="section-title" data-aos="fade-up">
+            <h2 class="section-title no-wrap-mobile" data-aos="fade-up">
                 あなたのプライバシーを<br />しっかり守ります
             </h2>
             <p class="section-body" data-aos="fade-up">

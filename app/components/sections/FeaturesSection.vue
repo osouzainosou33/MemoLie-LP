@@ -19,7 +19,7 @@
             >
                 <div class="feature-text">
                     <span class="feature-tag">{{ feature.tag }}</span>
-                    <h3 class="feature-title" v-html="feature.title"></h3>
+                    <h3 class="feature-title no-wrap-mobile" v-html="feature.title"></h3>
                     <p class="feature-body">{{ feature.body }}</p>
                     <ul class="feature-points">
                         <li v-for="(point, i) in feature.points" :key="i">

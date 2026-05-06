@@ -16,7 +16,7 @@
                         <div class="origin-part-desc">ライ（球の状態）</div>
                     </div>
                 </div>
-                <p class="origin-story">
+                <p class="origin-story no-wrap-mobile">
                     「ライが悪い」というゴルフ用語、聞いたことありますか？ボールの置かれた状況のことです。<br /><br />
                     初心者のころ、ラフ・傾斜・バンカーでどうすればいいかわからずに困りました。そしてせっかくレッスンで教わっても、コースに出るころには忘れてしまう。<br /><br />
                     忙しい中の貴重な練習を、無駄にしてほしくない。そんな想いから、<strong
@@ -32,7 +32,7 @@
                 data-aos-delay="100"
             >
                 <img src="/assets/memokun.png" alt="メモくん" loading="lazy" />
-                <div class="origin-quote">
+                <div class="origin-quote no-wrap-mobile">
                     「ライが悪い時、どうすれば？」<br />
                     その答えを、あなた自身が<br />ここに積み重ねていく。
                 </div>

@@ -9,10 +9,10 @@
         />
         <p class="section-label" data-aos="fade-up">Solution</p>
         <h2 class="section-title" data-aos="fade-up">
-            気づきを、<br />次のスコアに変える
+            迷ったとき、<br />いつでも戻れる場所
         </h2>
-        <p class="section-body" data-aos="fade-up">
-            自分だけのゴルフ攻略書をスマホの中に。MemoLie（メモリー）は「気づき」を蓄積して、スコアに変えるゴルフ専用メモアプリです。スコア管理より大切な「なぜ」と「どう直すか」を、クラブ別・シチュエーション別に残せます。
+        <p class="section-body no-wrap-mobile" data-aos="fade-up">
+            コーチに教わって、動画を見て——それでもコースに出ると、自分のフォームがわからなくなる。<br />MemoLie（メモリー）は、あなたが積み上げた気づきの「帰る場所」です。<br />クラブ別・シチュエーション別に整理した自分だけのメモが、迷ったときの答えになります。
         </p>
         <div class="solution-cta" data-aos="fade-up">
             <a
@@ -29,7 +29,9 @@
                 </svg>
                 App Store で無料ダウンロード
             </a>
-            <span class="solution-note">iPhone対応 ・ 基本無料 ・ メモは登録不要</span>
+            <span class="solution-note"
+                >iPhone対応 ・ 基本無料 ・ メモは登録不要</span
+            >
         </div>
     </section>
 </template>
@@ -37,7 +39,10 @@
 <script setup lang="ts">
 declare const gtag: (...args: unknown[]) => void;
 function trackClick() {
-    gtag("event", "click", { event_category: "cta", event_label: "solution_appstore" });
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "solution_appstore",
+    });
 }
 </script>
 

@@ -47,6 +47,13 @@ useHead({
 
 const articles = [
     {
+        slug: "simulation-golf-no-effect",
+        tag: "シミュレーションゴルフ",
+        title: "シミュレーションゴルフに効果がないと感じたら確認したい3つのこと",
+        description: "通っているのにスコアが変わらない——その理由は「記録していないこと」にあります。効果が出る人・出ない人の違いと練習の変え方を解説します。",
+        date: "2026年5月6日",
+    },
+    {
         slug: "simulation-golf-practice-record",
         tag: "シミュレーションゴルフ",
         title: "シミュレーション練習を記録する方法｜上達につながるメモの残し方",

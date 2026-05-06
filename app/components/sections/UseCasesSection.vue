@@ -2,7 +2,7 @@
     <section class="section usecases" id="usecases">
         <div class="section-inner">
             <p class="section-label" data-aos="fade-up">Use cases</p>
-            <h2 class="section-title" data-aos="fade-up">
+            <h2 class="section-title no-wrap-mobile" data-aos="fade-up">
                 こんな使い方を<br />されています
             </h2>
             <p class="section-lead" data-aos="fade-up">

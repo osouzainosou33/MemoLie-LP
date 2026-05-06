@@ -8,11 +8,11 @@
             data-aos="zoom-in"
         />
         <p class="section-label" data-aos="fade-up">Download</p>
-        <h2 class="section-title" data-aos="fade-up">
+        <h2 class="section-title no-wrap-mobile" data-aos="fade-up">
             今日の練習から、<br />記録を始めよう
         </h2>
-        <p class="section-body" data-aos="fade-up">
-            無料ダウンロード。メモや飛距離の記録は登録なしですぐ始められます。動画のクラウド保存はログイン後にご利用ください。
+        <p class="section-body no-wrap-mobile" data-aos="fade-up">
+            無料ダウンロード。メモや飛距離の記録は登録なしですぐ始められます。<br />動画のクラウド保存はログイン後にご利用ください。
         </p>
         <div class="cta-actions" data-aos="fade-up">
             <a
@@ -29,7 +29,9 @@
                 </svg>
                 App Store で無料ダウンロード
             </a>
-            <span class="cta-note">iPhone対応 ・ 基本無料 ・ メモは登録不要</span>
+            <span class="cta-note"
+                >iPhone対応 ・ 基本無料 ・ メモは登録不要</span
+            >
         </div>
     </section>
 </template>
@@ -41,6 +43,9 @@ const appStoreUrl = APP_CONFIG.APP_STORE_URL;
 
 declare const gtag: (...args: unknown[]) => void;
 function trackClick() {
-    gtag("event", "click", { event_category: "cta", event_label: "cta_appstore" });
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "cta_appstore",
+    });
 }
 </script>

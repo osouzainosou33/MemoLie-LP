@@ -56,6 +56,12 @@ const ALL_ARTICLES = [
         tag: 'レッスン活用術',
         date: '2026年5月4日',
     },
+    {
+        slug: 'simulation-golf-no-effect',
+        title: 'シミュレーションゴルフに効果がないと感じたら確認したい3つのこと',
+        tag: 'シミュレーションゴルフ',
+        date: '2026年5月6日',
+    },
 ];
 
 const relatedArticles = computed(() => {

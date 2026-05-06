@@ -4,7 +4,7 @@
             <div class="target-inner">
                 <div>
                     <p class="section-label" data-aos="fade-up">こんな方に</p>
-                    <h2 class="section-title" data-aos="fade-up">
+                    <h2 class="section-title no-wrap-mobile" data-aos="fade-up">
                         ゴルフ上達を目指す、<br />あなたへ
                     </h2>
                     <div class="target-list">
@@ -19,7 +19,7 @@
                             {{ item }}
                         </div>
                     </div>
-                    <p class="target-manifesto" data-aos="fade-up">
+                    <p class="target-manifesto no-wrap-mobile" data-aos="fade-up">
                         上達する人は、気づきを記録している。<br />
                         上達しない人は、毎回ゼロから始めている。
                     </p>
