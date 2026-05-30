@@ -21,6 +21,24 @@ const props = defineProps<{ currentSlug: string }>();
 
 const ALL_ARTICLES = [
     {
+        slug: 'golf-lesson-how-to-choose',
+        title: 'ゴルフレッスンの選び方｜初心者が後悔しないスクール比較と選ぶポイント',
+        tag: 'レッスン活用術',
+        date: '2026年5月30日',
+    },
+    {
+        slug: 'golf-working-adult-how-to-start',
+        title: 'ゴルフを始めたい社会人へ｜忙しくても上達できる始め方と最初の一歩',
+        tag: '社会人ゴルフ',
+        date: '2026年5月30日',
+    },
+    {
+        slug: 'golf-beginner-how-to-start',
+        title: 'ゴルフ初心者は何から始める？シミュレーションゴルフ＋レッスンプロが最強の理由',
+        tag: '初心者ガイド',
+        date: '2026年5月30日',
+    },
+    {
         slug: 'golf-swing-memo',
         title: 'ゴルフスイングのメモの残し方｜上達する人が実践している3つのコツ',
         tag: 'スイングメモ術',
