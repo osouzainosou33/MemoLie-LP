@@ -21,6 +21,24 @@ const props = defineProps<{ currentSlug: string }>();
 
 const ALL_ARTICLES = [
     {
+        slug: 'golf-course-manners',
+        title: 'ゴルフコースのマナー完全ガイド｜知らないと恥をかく基本ルール',
+        tag: 'マナー・エチケット',
+        date: '2026年5月31日',
+    },
+    {
+        slug: 'golf-dress-code',
+        title: 'ゴルフの服装ルール完全ガイド｜コース・打ちっぱなし・インドア別まとめ',
+        tag: 'マナー・エチケット',
+        date: '2026年5月31日',
+    },
+    {
+        slug: 'golf-fore',
+        title: 'ゴルフの「ファー！」とは？意味・言うタイミング・対処法を解説',
+        tag: 'マナー・エチケット',
+        date: '2026年5月31日',
+    },
+    {
         slug: 'golf-lesson-how-to-choose',
         title: 'ゴルフレッスンの選び方｜初心者が後悔しないスクール比較と選ぶポイント',
         tag: 'レッスン活用術',
