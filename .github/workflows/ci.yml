@@ -1,0 +1,88 @@
+name: CI
+
+# 開発規約（souinc: departments/dev/conventions.md §5）に対応するCIゲート。
+# PR・main push で必ず実行し、これが緑にならないとレビュー部は監査に入らない。
+#   1. build-test … 依存インストール → lint/typecheck/test（あれば）→ Nuxtビルド
+#   2. security   … 依存の既知脆弱性監査 + 秘密情報の混入スキャン
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # lint / typecheck / test は package.json に存在すれば実行（未整備でも素通り）。
+      # 規約 §7 のTODO：テスト・リンタを導入したらここが自動で効き始める。
+      - name: Lint
+        run: npm run lint --if-present
+
+      - name: Typecheck
+        run: npm run typecheck --if-present
+
+      - name: Test
+        run: npm run test --if-present
+
+      - name: Build (Nuxt)
+        run: npm run build
+
+  security:
+    name: Security
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # 既知脆弱性の監査。当面は high で「報告のみ（非ブロッキング）」とし、過検知でdev流れを止めない。
+      # 運用が安定したら continue-on-error を外して必須ゲート化する（conventions.md §7）。
+      - name: Dependency audit
+        run: npm audit --audit-level=high
+        continue-on-error: true
+
+      # 秘密情報の混入スキャン（外部Actionに依存せず、grepベースで自己完結）。
+      - name: Secret scan
+        run: |
+          set -e
+          # .env / 秘密鍵ファイルがトラッキングされていないか
+          tracked=$(git ls-files | grep -E '(^|/)\.env($|\.)|\.p8$|\.pem$|\.key$' | grep -v '\.env\.example$' || true)
+          if [ -n "$tracked" ]; then
+            echo "::error::秘密情報ファイルがコミットされています:"; echo "$tracked"; exit 1
+          fi
+          # ソース中に秘密鍵ヘッダや典型的なトークン直書きがないか
+          if grep -REn 'BEGIN (EC |RSA |OPENSSH |)PRIVATE KEY' \
+               --include='*.ts' --include='*.js' --include='*.vue' \
+               --include='*.mjs' --include='*.cjs' --include='*.json' \
+               --include='*.env' --exclude-dir='node_modules' --exclude-dir='.git' . ; then
+            echo "::error::秘密鍵らしき文字列がソースに含まれています"; exit 1
+          fi
+          echo "OK: 秘密情報の混入なし"
