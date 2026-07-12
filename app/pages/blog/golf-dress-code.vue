@@ -329,6 +329,11 @@
                     </p>
                 </section>
 
+                <BlogAppCta
+                    text="ラウンド前の確認ごと、スマホに1つ"
+                    sub="服装の注意点も、当日の持ち物メモも。ゴルフ専用メモアプリMemoLie（メモリー）にまとめて残せます。"
+                />
+
                 <BlogRelatedArticles current-slug="golf-dress-code" />
 
             </article>
@@ -342,6 +347,7 @@
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
+import BlogAppCta from "~/components/BlogAppCta.vue";
 
 useHead({
     title: "ゴルフの服装ルール完全ガイド｜コース・打ちっぱなし・インドア別まとめ | MemoLie",

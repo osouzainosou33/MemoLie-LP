@@ -305,6 +305,11 @@
                     </p>
                 </section>
 
+                <BlogAppCta
+                    text="教わったマナーも、ゴルフの気づきも、1か所に"
+                    sub="コースデビューで学んだことは、忘れないうちにメモ。MemoLie（メモリー）はゴルフ専用のメモアプリです。"
+                />
+
                 <BlogRelatedArticles current-slug="golf-course-manners" />
 
             </article>
@@ -318,6 +323,7 @@
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
+import BlogAppCta from "~/components/BlogAppCta.vue";
 
 useHead({
     title: "ゴルフコースのマナー完全ガイド｜知らないと恥をかく基本ルール | MemoLie",

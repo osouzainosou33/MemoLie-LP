@@ -279,6 +279,11 @@
                     </p>
                 </section>
 
+                <BlogAppCta
+                    text="コースで学んだこと、忘れないうちにメモ"
+                    sub="ヒヤリとした場面や気づきを残しておくと、次のラウンドがもっと安全に、もっとうまくなる。"
+                />
+
                 <BlogRelatedArticles current-slug="golf-fore" />
 
             </article>
@@ -292,6 +297,7 @@
 import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
+import BlogAppCta from "~/components/BlogAppCta.vue";
 
 useHead({
     title: "ゴルフの「ファー！」とは？意味・言うタイミング・対処法を解説 | MemoLie",
