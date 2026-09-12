@@ -254,6 +254,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -276,16 +277,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_golf-coach-advice-forget",
+    });
+}
+
+useArticleSeo({
     title: "ゴルフのコーチに言われたことを忘れる人へ｜記録で差をつける方法 | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "レッスンでコーチに言われたアドバイスを次のラウンドで活かせていますか？忘れる原因と、クラブ別に記録してコースで使える具体的な方法を解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-coach-advice-forget" }],
+    ogTitle: "ゴルフのコーチに言われたことを忘れる人へ｜記録で差をつける方法",
+    description:
+        "レッスンでコーチに言われたアドバイスを次のラウンドで活かせていますか？忘れる原因と、クラブ別に記録してコースで使える具体的な方法を解説します。",
+    path: "/blog/golf-coach-advice-forget",
 });
 </script>
 

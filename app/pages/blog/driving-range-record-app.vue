@@ -250,6 +250,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -271,16 +272,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_driving-range-record-app",
+    });
+}
+
+useArticleSeo({
     title: "打ちっぱなしの記録に使えるアプリ｜練習を確実に次につなげる方法 | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "打ちっぱなしで気づいたことをどう記録する？クラブ別メモ・スイング動画・ミス対策をセットで残せるゴルフ専用アプリの使い方を解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/driving-range-record-app" }],
+    ogTitle: "打ちっぱなしの記録に使えるアプリ｜練習を確実に次につなげる方法",
+    description:
+        "打ちっぱなしで気づいたことをどう記録する？クラブ別メモ・スイング動画・ミス対策をセットで残せるゴルフ専用アプリの使い方を解説します。",
+    path: "/blog/driving-range-record-app",
 });
 </script>
 

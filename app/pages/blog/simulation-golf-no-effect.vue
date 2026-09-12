@@ -284,6 +284,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -305,16 +306,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_simulation-golf-no-effect",
+    });
+}
+
+useArticleSeo({
     title: "シミュレーションゴルフに効果がないと感じたら確認したい3つのこと | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "シミュレーションゴルフに通っているのにスコアが変わらない——その理由は「記録していないこと」にあります。効果が出ない人と出る人の違い、練習の変え方を具体的に解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/simulation-golf-no-effect" }],
+    ogTitle: "シミュレーションゴルフに効果がないと感じたら確認したい3つのこと",
+    description:
+        "シミュレーションゴルフに通っているのにスコアが変わらない——その理由は「記録していないこと」にあります。効果が出ない人と出る人の違い、練習の変え方を具体的に解説します。",
+    path: "/blog/simulation-golf-no-effect",
 });
 </script>
 

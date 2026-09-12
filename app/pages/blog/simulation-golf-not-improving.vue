@@ -251,6 +251,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -272,16 +273,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_simulation-golf-not-improving",
+    });
+}
+
+useArticleSeo({
     title: "シミュレーションゴルフで上達しない人に共通する3つの原因 | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "シミュレーションゴルフに通っているのになかなか上達しない——その原因は「記録していないこと」にあります。伸び悩みを解消するための練習前・中・後の習慣を解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/simulation-golf-not-improving" }],
+    ogTitle: "シミュレーションゴルフで上達しない人に共通する3つの原因",
+    description:
+        "シミュレーションゴルフに通っているのになかなか上達しない——その原因は「記録していないこと」にあります。伸び悩みを解消するための練習前・中・後の習慣を解説します。",
+    path: "/blog/simulation-golf-not-improving",
 });
 </script>
 
