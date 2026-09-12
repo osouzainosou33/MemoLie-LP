@@ -925,12 +925,11 @@ footer {
 }
 
 /* Utilities */
-.no-wrap-mobile {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-}
-
+/* モバイルでは <br> による強制改行を無効化し、通常の折り返しに任せる。
+   以前は display:flex にしていたが、flexコンテナはtext-alignの継承を
+   無効化する(justify-contentが必要)ため、中央揃えのはずの見出しが
+   常にflex-start(左)に寄って見える不具合があった。display指定を持たない
+   ことで各要素本来のdisplay(block/inline)を保ち、text-alignを正しく効かせる。 */
 @media (max-width: 768px) {
     .no-wrap-mobile br {
         display: none;
