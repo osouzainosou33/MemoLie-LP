@@ -8,7 +8,7 @@
             <p class="features-lead" data-aos="fade-up">
                 クラブ別メモ ／ シチュエーション別メモ ／ ベースフォームメモ ／
                 アプローチ距離メモ ／ ミスメモ ／ 成長ログ（タイムライン） ／
-                スイング動画保存
+                スイング動画保存 ／ YouTubeリンク保存 ／ 練習カレンダー
             </p>
             <div
                 v-for="(feature, index) in features"
@@ -19,7 +19,10 @@
             >
                 <div class="feature-text">
                     <span class="feature-tag">{{ feature.tag }}</span>
-                    <h3 class="feature-title no-wrap-mobile" v-html="feature.title"></h3>
+                    <h3
+                        class="feature-title no-wrap-mobile"
+                        v-html="feature.title"
+                    ></h3>
                     <p class="feature-body">{{ feature.body }}</p>
                     <ul class="feature-points">
                         <li v-for="(point, i) in feature.points" :key="i">
@@ -94,16 +97,28 @@ const features = [
         alt: "MemoLie 実機 - シチュエーション・アプローチ距離",
     },
     {
+        tag: "YouTube Link",
+        title: "YouTube動画を<br>クラブ別に保存",
+        body: "参考にしたいYouTube動画をクラブ・シチュエーション別に紐づけて保存。打ちっぱなしの前に「このドライバーの動画を見てから打つ」が習慣になります。",
+        points: [
+            "クラブ・シチュエーション・アプローチ別に管理",
+            "練習前にその場で見返せる",
+            "メモと動画をセットで蓄積",
+        ],
+        screenshot: "/assets/1.2_club_iphone.jpg",
+        alt: "MemoLie 実機 - YouTubeリンク保存",
+    },
+    {
         tag: "Growth Log",
-        title: "成長ログで<br>変化を実感",
-        body: "フォームを修正するたびに「変更ログ」が自動で記録されます。3ヶ月前との自分の違いが一目でわかります。",
+        title: "成長ログ・カレンダーで<br>変化を実感",
+        body: "フォームを修正するたびに「変更ログ」が自動記録。練習した日はカレンダーに残り、積み上げが見えることが続ける力になります。",
         points: [
             "変更内容が自動でログに残る",
+            "練習カレンダーで頻度を可視化",
             "目標スコア・ベストスコアを設定",
-            "自由メモで気づきをその場で記録",
         ],
-        screenshot: "/assets/iphone-memolie-growth-log.png",
-        alt: "MemoLie 実機 - 成長ログ",
+        screenshot: "/assets/1.2_calendar_iphone.jpg",
+        alt: "MemoLie 実機 - 成長ログ・カレンダー",
     },
 ];
 </script>
