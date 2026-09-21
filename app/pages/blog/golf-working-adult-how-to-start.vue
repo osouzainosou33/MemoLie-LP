@@ -296,6 +296,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -318,16 +319,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_golf-working-adult-how-to-start",
+    });
+}
+
+useArticleSeo({
     title: "ゴルフを始めたい社会人へ｜忙しくても上達できる始め方と最初の一歩 | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "忙しい社会人がゴルフを始めるなら何から手をつければいい？時間・費用・効率を考えた最適な始め方と、シミュレーションゴルフ＋レッスンプロが社会人に向いている理由を解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-working-adult-how-to-start" }],
+    ogTitle: "ゴルフを始めたい社会人へ｜忙しくても上達できる始め方と最初の一歩",
+    description:
+        "忙しい社会人がゴルフを始めるなら何から手をつければいい？時間・費用・効率を考えた最適な始め方と、シミュレーションゴルフ＋レッスンプロが社会人に向いている理由を解説します。",
+    path: "/blog/golf-working-adult-how-to-start",
 });
 </script>
 

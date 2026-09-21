@@ -281,6 +281,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -303,16 +304,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_golf-beginner-how-to-start",
+    });
+}
+
+useArticleSeo({
     title: "ゴルフ初心者は何から始める？シミュレーションゴルフ＋レッスンプロが最強の理由 | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "ゴルフ初心者が何から始めるかで上達スピードは大きく変わります。打ちっぱなし・スクール・コースデビューを比較しながら、シミュレーションゴルフ＋レッスンプロが最強の理由を解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-beginner-how-to-start" }],
+    ogTitle: "ゴルフ初心者は何から始める？シミュレーションゴルフ＋レッスンプロが最強の理由",
+    description:
+        "ゴルフ初心者が何から始めるかで上達スピードは大きく変わります。打ちっぱなし・スクール・コースデビューを比較しながら、シミュレーションゴルフ＋レッスンプロが最強の理由を解説します。",
+    path: "/blog/golf-beginner-how-to-start",
 });
 </script>
 

@@ -330,6 +330,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -352,16 +353,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_golf-lesson-how-to-choose",
+    });
+}
+
+useArticleSeo({
     title: "ゴルフレッスンの選び方｜初心者が後悔しないスクール比較と選ぶポイント | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "集団スクール・打ちっぱなし・マンツーマン・シミュレーション系——ゴルフレッスンの種類を正直に比較。初心者が後悔しない選び方と、レッスン効果を最大化するための3つのポイントを解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-lesson-how-to-choose" }],
+    ogTitle: "ゴルフレッスンの選び方｜初心者が後悔しないスクール比較と選ぶポイント",
+    description:
+        "集団スクール・打ちっぱなし・マンツーマン・シミュレーション系——ゴルフレッスンの種類を正直に比較。初心者が後悔しない選び方と、レッスン効果を最大化するための3つのポイントを解説します。",
+    path: "/blog/golf-lesson-how-to-choose",
 });
 </script>
 

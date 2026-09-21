@@ -325,16 +325,12 @@ import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 import BlogAppCta from "~/components/BlogAppCta.vue";
 
-useHead({
+useArticleSeo({
     title: "ゴルフコースのマナー完全ガイド｜知らないと恥をかく基本ルール | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "初めてコースに出る前に知っておくべきゴルフのマナーを徹底解説。進行・コース保護・安全・同伴者への気遣いの4つに分けて、具体的なNG例と好印象につながる行動をまとめました。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-course-manners" }],
+    ogTitle: "ゴルフコースのマナー完全ガイド｜知らないと恥をかく基本ルール",
+    description:
+        "初めてコースに出る前に知っておくべきゴルフのマナーを徹底解説。進行・コース保護・安全・同伴者への気遣いの4つに分けて、具体的なNG例と好印象につながる行動をまとめました。",
+    path: "/blog/golf-course-manners",
 });
 </script>
 

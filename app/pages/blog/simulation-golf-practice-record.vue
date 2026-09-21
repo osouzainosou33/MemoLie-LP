@@ -250,6 +250,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -271,16 +272,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_simulation-golf-practice-record",
+    });
+}
+
+useArticleSeo({
     title: "シミュレーション練習を記録する方法｜上達につながるメモの残し方 | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "シミュレーターで打つだけで終わっていませんか？弾道データではなく「感覚」と「気づき」を記録することで、練習が積み上がっていきます。続けやすいメモの残し方を解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/simulation-golf-practice-record" }],
+    ogTitle: "シミュレーション練習を記録する方法｜上達につながるメモの残し方",
+    description:
+        "シミュレーターで打つだけで終わっていませんか？弾道データではなく「感覚」と「気づき」を記録することで、練習が積み上がっていきます。続けやすいメモの残し方を解説します。",
+    path: "/blog/simulation-golf-practice-record",
 });
 </script>
 

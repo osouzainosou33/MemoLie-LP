@@ -251,6 +251,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -272,16 +273,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_golf-miss-cause-record",
+    });
+}
+
+useArticleSeo({
     title: "ゴルフのミス原因を記録する方法｜繰り返さないための3ステップ | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "ゴルフで同じミスを繰り返してしまう原因は「記録の仕方」にあります。ミス・原因・対策の3点セットで記録する方法と、コースで使えるミスメモの実践例を解説します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-miss-cause-record" }],
+    ogTitle: "ゴルフのミス原因を記録する方法｜繰り返さないための3ステップ",
+    description:
+        "ゴルフで同じミスを繰り返してしまう原因は「記録の仕方」にあります。ミス・原因・対策の3点セットで記録する方法と、コースで使えるミスメモの実践例を解説します。",
+    path: "/blog/golf-miss-cause-record",
 });
 </script>
 

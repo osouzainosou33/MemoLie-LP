@@ -241,6 +241,7 @@
                     <a
                         href="https://apps.apple.com/jp/app/memolie/id6760087461"
                         class="cta-btn"
+                        @click="trackClick"
                         target="_blank"
                         rel="noopener"
                     >
@@ -262,16 +263,20 @@ import AppHeader from "~/components/AppHeader.vue";
 import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 
-useHead({
+declare const gtag: (...args: unknown[]) => void;
+function trackClick() {
+    gtag("event", "click", {
+        event_category: "cta",
+        event_label: "blog_golf-swing-memo",
+    });
+}
+
+useArticleSeo({
     title: "ゴルフスイングのメモの残し方｜上達する人が実践している3つのコツ | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "ゴルフのスイングメモはどう残すと効果的？クラブ別・シチュエーション別に整理する方法を解説。コースで「思い出せない」を防ぐ具体的な記録術を紹介します。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-swing-memo" }],
+    ogTitle: "ゴルフスイングのメモの残し方｜上達する人が実践している3つのコツ",
+    description:
+        "ゴルフのスイングメモはどう残すと効果的？クラブ別・シチュエーション別に整理する方法を解説。コースで「思い出せない」を防ぐ具体的な記録術を紹介します。",
+    path: "/blog/golf-swing-memo",
 });
 </script>
 

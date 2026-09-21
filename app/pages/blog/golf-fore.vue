@@ -299,16 +299,12 @@ import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 import BlogAppCta from "~/components/BlogAppCta.vue";
 
-useHead({
+useArticleSeo({
     title: "ゴルフの「ファー！」とは？意味・言うタイミング・対処法を解説 | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "ゴルフの「ファー（Fore）」の意味・語源・いつ叫ぶか・声の出し方・聞こえたときの対処法まで徹底解説。コースデビュー前に必ず知っておきたいゴルフ安全マナーの基本です。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-fore" }],
+    ogTitle: "ゴルフの「ファー！」とは？意味・言うタイミング・対処法を解説",
+    description:
+        "ゴルフの「ファー（Fore）」の意味・語源・いつ叫ぶか・声の出し方・聞こえたときの対処法まで徹底解説。コースデビュー前に必ず知っておきたいゴルフ安全マナーの基本です。",
+    path: "/blog/golf-fore",
 });
 </script>
 

@@ -349,16 +349,12 @@ import AppFooter from "~/components/AppFooter.vue";
 import BlogRelatedArticles from "~/components/BlogRelatedArticles.vue";
 import BlogAppCta from "~/components/BlogAppCta.vue";
 
-useHead({
+useArticleSeo({
     title: "ゴルフの服装ルール完全ガイド｜コース・打ちっぱなし・インドア別まとめ | MemoLie",
-    meta: [
-        {
-            name: "description",
-            content:
-                "ゴルフコースの服装ルール（NG・必須アイテム）から打ちっぱなし・インドアゴルフの服装まで場所別に解説。初めてのコースで服装で恥をかかないための完全ガイドです。",
-        },
-    ],
-    link: [{ rel: "canonical", href: "https://memolie.app/blog/golf-dress-code" }],
+    ogTitle: "ゴルフの服装ルール完全ガイド｜コース・打ちっぱなし・インドア別まとめ",
+    description:
+        "ゴルフコースの服装ルール（NG・必須アイテム）から打ちっぱなし・インドアゴルフの服装まで場所別に解説。初めてのコースで服装で恥をかかないための完全ガイドです。",
+    path: "/blog/golf-dress-code",
 });
 </script>
 
