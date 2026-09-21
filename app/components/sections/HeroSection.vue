@@ -13,14 +13,14 @@
                 >
                     スイング中に「あれ、どうやって打つんだっけ？」ってなったあなたへ。
                 </p> -->
-                <div class="hero-badge">Golf Swing Memo App</div>
+                <div class="hero-badge">ゴルフ専用メモアプリ</div>
                 <h1 class="hero-headline">
                     打ちっぱなしでは打てる。<br />
                     コースでは打てない。<br />
-                    <span class="accent">それってもったいなくない？</span>
+                    <span class="accent">それって、もったいない。</span>
                 </h1>
                 <p class="hero-sub no-wrap-mobile">
-                    シミュレーターや打ちっぱなしに通っているのに手応えがない。コースに出ると練習通りに打てない。いろんな人から教わるうちに、自分のフォームが迷子になった——。<br />MemoLie（メモリー）は、そんなゴルファーの「ここさえ見れば大丈夫」をつくる、ゴルフ専用メモアプリです。
+                    練習しても手応えがない。コースでは練習通りに打てない。教わるほどフォームが迷子に——。<br /><strong>MemoLie（メモリー）</strong>は、あなたの「ここさえ見れば大丈夫」を持ち歩くゴルフノートです。
                 </p>
                 <div class="hero-actions">
                     <a
@@ -37,21 +37,35 @@
                         </svg>
                         App Store で無料ダウンロード
                     </a>
-                    <span class="hero-note"
-                        >iPhone対応 ・ 基本無料 ・ メモは登録不要</span
-                    >
+                    <div class="hero-trust">
+                        <span class="hero-stars" aria-hidden="true">★★★★★</span>
+                        <span>iPhone対応 ・ 基本無料 ・ 登録不要</span>
+                    </div>
                 </div>
             </div>
+            <div
+                class="hero-visual"
+                data-aos="fade-left"
+                data-aos-duration="800"
+                data-aos-delay="150"
+            >
+                <div class="iphone-frame hero-phone">
+                    <div class="iphone-screen">
+                        <img
+                            src="/assets/iphone-memolie-home.png"
+                            alt="MemoLieのホーム画面"
+                            loading="eager"
+                        />
+                    </div>
+                </div>
+                <img
+                    class="hero-memokun"
+                    src="/assets/memokun.png"
+                    alt="メモくん"
+                    loading="lazy"
+                />
+            </div>
         </div>
-        <img
-            class="hero-memokun"
-            src="/assets/memokun.png"
-            alt="メモくん"
-            loading="lazy"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200"
-        />
     </section>
 </template>
 
