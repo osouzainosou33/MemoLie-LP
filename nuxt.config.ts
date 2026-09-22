@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     app: {
         head: {
             htmlAttrs: { lang: "ja" },
-            title: "ゴルフ練習メモアプリ MemoLie（メモリー）| スイング・飛距離・コツを記録して上達",
+            title: "ゴルフメモアプリ MemoLie（メモリー）| 練習ノート・スイング動画・飛距離を記録して上達",
             meta: [
                 { charset: "utf-8" },
                 {
@@ -25,22 +25,22 @@ export default defineNuxtConfig({
                 {
                     name: "description",
                     content:
-                        "MemoLie（メモリー）はアマチュアゴルファーのためのゴルフ練習メモアプリ。スイングのコツ・クラブ別飛距離・シチュエーション別対策を記録し、スイング動画のクラウド保存にも対応。メモは登録不要で基本無料。プレミアムで動画無制限。iPhone対応。",
+                        "MemoLie（メモリー）は無料のゴルフメモアプリ。練習ノート感覚でスイングのコツ・クラブ別飛距離・ラウンドメモを記録。スイング動画のクラウド保存にも対応し、打ちっぱなしやシミュレーションゴルフの練習記録を一元管理。iPhone対応・登録不要で今すぐ使えます。",
                 },
                 {
                     name: "keywords",
                     content:
-                        "ゴルフメモアプリ,ゴルフ練習記録,スイングメモ,スイング動画,クラブ飛距離管理,ゴルフノートアプリ,ゴルフ上達,打ちっぱなし記録,ゴルフ練習日記,iPhone ゴルフアプリ,無料ゴルフアプリ,ゴルフサブスク",
+                        "ゴルフメモ アプリ,ゴルフメモアプリ,ゴルフ練習記録,ゴルフ練習ノート アプリ,ゴルフ ラウンドメモ アプリ,スイングメモ,スイング動画,クラブ飛距離管理,ゴルフノートアプリ,ゴルフ上達,打ちっぱなし記録,ゴルフ練習日記,iPhone ゴルフアプリ,無料ゴルフアプリ,ゴルフ練習記録アプリ",
                 },
                 // OGP
                 {
                     property: "og:title",
-                    content: "ゴルフ練習メモアプリ MemoLie（メモリー）| スイング・飛距離・コツを記録して上達",
+                    content: "ゴルフメモアプリ MemoLie（メモリー）| 練習ノート・スイング動画・飛距離を記録",
                 },
                 {
                     property: "og:description",
                     content:
-                        "MemoLie（メモリー）はアマチュアゴルファーのためのゴルフ練習メモアプリ。スイングメモ・飛距離・動画のクラウド保存。メモは登録不要で基本無料、プレミアムで動画無制限。",
+                        "無料のゴルフメモアプリ MemoLie。練習ノート感覚でスイングのコツ・飛距離・ラウンドメモを記録。スイング動画のクラウド保存対応。iPhone・登録不要で今すぐ使えます。",
                 },
                 { property: "og:type", content: "website" },
                 { property: "og:locale", content: "ja_JP" },
@@ -53,12 +53,12 @@ export default defineNuxtConfig({
                 { name: "twitter:card", content: "summary_large_image" },
                 {
                     name: "twitter:title",
-                    content: "ゴルフ練習メモアプリ MemoLie（メモリー）",
+                    content: "ゴルフメモアプリ MemoLie（メモリー）| 練習ノート・スイング動画を記録",
                 },
                 {
                     name: "twitter:description",
                     content:
-                        "スイングメモ・飛距離・動画のクラウド保存。メモは登録不要で基本無料。プレミアムで動画無制限のiPhoneゴルフアプリ。",
+                        "無料のゴルフメモアプリ。スイングのコツ・飛距離・動画をクラウド保存。登録不要で今すぐ使えるiPhone対応アプリ。",
                 },
                 {
                     name: "twitter:image",
@@ -98,6 +98,7 @@ gtag('config', 'G-264LWRKMP9');`,
                         "@context": "https://schema.org",
                         "@type": "SoftwareApplication",
                         name: "MemoLie（メモリー）",
+                        alternateName: "ゴルフメモアプリ MemoLie",
                         operatingSystem: "iOS",
                         applicationCategory: "SportsApplication",
                         offers: {
@@ -107,10 +108,12 @@ gtag('config', 'G-264LWRKMP9');`,
                             description: "ダウンロード無料。アプリ内課金でプレミアムプラン（動画無制限等）を提供。",
                         },
                         description:
-                            "アマチュアゴルファーのためのゴルフ練習メモアプリ。スイングのコツ・クラブ別飛距離・シチュエーション別対策の記録に加え、スイング動画のクラウド保存に対応。",
+                            "アマチュアゴルファーのための無料ゴルフメモアプリ。スイングのコツ・クラブ別飛距離・ラウンドメモの記録に加え、スイング動画のクラウド保存に対応。練習ノート感覚で使えるiPhoneアプリ。",
                         url: "https://memolie.app",
                         downloadUrl:
                             "https://apps.apple.com/jp/app/memolie/id6760087461",
+                        screenshot: "https://memolie.app/assets/icon.png",
+                        featureList: "スイングメモ, クラブ別飛距離記録, スイング動画クラウド保存, ラウンドメモ, シチュエーション別対策",
                     }),
                 },
             ],

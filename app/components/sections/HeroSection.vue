@@ -38,7 +38,6 @@
                         App Store で無料ダウンロード
                     </a>
                     <div class="hero-trust">
-                        <span class="hero-stars" aria-hidden="true">★★★★★</span>
                         <span>iPhone対応 ・ 基本無料 ・ 登録不要</span>
                     </div>
                 </div>
