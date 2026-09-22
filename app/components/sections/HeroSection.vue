@@ -54,7 +54,10 @@
                         <img
                             src="/assets/iphone-memolie-home.png"
                             alt="MemoLieのホーム画面"
+                            width="296"
+                            height="642"
                             loading="eager"
+                            fetchpriority="high"
                         />
                     </div>
                 </div>
@@ -62,6 +65,8 @@
                     class="hero-memokun"
                     src="/assets/memokun.png"
                     alt="メモくん"
+                    width="128"
+                    height="128"
                     loading="lazy"
                 />
             </div>

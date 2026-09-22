@@ -7,11 +7,11 @@
     >
         <a :href="isHome ? '#top' : '/'" class="header-logo">
             <img
-                src="/assets/icon.png"
+                src="/assets/icon-header.png"
                 alt="MemoLie"
                 width="40"
                 height="40"
-                loading="lazy"
+                fetchpriority="high"
             />
             <span class="header-logo-name">MemoLie</span>
         </a>
