@@ -20,6 +20,7 @@
             <a :href="navLink('#usecases')">活用例</a>
             <a :href="navLink('#pricing')">料金</a>
             <a :href="navLink('#howto')">使い方</a>
+            <a href="/coach">アシスタントコーチ</a>
             <a href="/blog" class="header-blog">ブログ</a>
             <a :href="appStoreUrl" target="_blank" rel="noopener noreferrer" class="header-cta">
                 <svg class="header-cta-icon" viewBox="0 0 24 24">
