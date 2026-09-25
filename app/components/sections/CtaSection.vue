@@ -4,6 +4,8 @@
             class="memokun-cta"
             src="/assets/memokun_fun.png"
             alt="メモくん"
+            width="130"
+            height="130"
             loading="lazy"
             data-aos="zoom-in"
         />

@@ -5,6 +5,8 @@
                 <img
                     src="/assets/memokun_worry.png"
                     alt="悩むメモくん"
+                    width="100"
+                    height="100"
                     loading="lazy"
                     class="memokun-worry"
                 />

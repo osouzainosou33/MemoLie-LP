@@ -25,7 +25,7 @@
                     </p>
                 </div>
                 <div class="target-visual" data-aos="zoom-in">
-                    <img src="/assets/memokun.png" alt="メモくん" loading="lazy" />
+                    <img src="/assets/memokun.png" alt="メモくん" width="220" height="220" loading="lazy" />
                 </div>
             </div>
         </div>

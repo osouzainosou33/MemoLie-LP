@@ -31,7 +31,7 @@
                 data-aos="fade-left"
                 data-aos-delay="100"
             >
-                <img src="/assets/memokun.png" alt="メモくん" loading="lazy" />
+                <img src="/assets/memokun.png" alt="メモくん" width="160" height="160" loading="lazy" />
                 <div class="origin-quote no-wrap-mobile">
                     「ライが悪い時、どうすれば？」<br />
                     その答えを、あなた自身が<br />ここに積み重ねていく。
