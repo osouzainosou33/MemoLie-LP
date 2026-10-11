@@ -25,3 +25,5 @@ logs
 
 # Firebase
 .firebase/
+.shots/
+.shots17/

@@ -71,13 +71,13 @@ export default defineNuxtConfig({
                 {
                     rel: "preload",
                     as: "style",
-                    href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap",
+                    href: "https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap",
                     onload: "this.onload=null;this.rel='stylesheet'",
                 },
             ],
             noscript: [
                 {
-                    innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap">',
+                    innerHTML: '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap">',
                 },
             ],
             script: [
@@ -105,7 +105,7 @@ gtag('config', 'G-264LWRKMP9');`,
                             "@type": "Offer",
                             price: "0",
                             priceCurrency: "JPY",
-                            description: "ダウンロード無料。アプリ内課金でプレミアムプラン（動画無制限等）を提供。",
+                            description: "ダウンロード無料。アプリ内課金でプレミアムプラン（動画保存15本まで・広告非表示等）を提供。",
                         },
                         description:
                             "アマチュアゴルファーのための無料ゴルフメモアプリ。スイングのコツ・クラブ別飛距離・ラウンドメモの記録に加え、スイング動画のクラウド保存に対応。練習ノート感覚で使えるiPhoneアプリ。",

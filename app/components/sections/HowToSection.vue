@@ -1,11 +1,9 @@
 <template>
     <section class="section howto" id="howto">
         <div class="section-inner">
-            <p class="section-label" style="text-align: center" data-aos="fade-up">
-                How to Use
-            </p>
+            <p class="section-label" style="text-align: center" data-aos="fade-up">How to Use</p>
             <h2 class="section-title no-wrap-mobile" style="text-align: center" data-aos="fade-up">
-                3ステップで<br />ゴルフ上達・スコアアップへ
+                使い方は、<br />たったこれだけ。
             </h2>
             <div class="steps-grid">
                 <div
@@ -20,13 +18,6 @@
                         <h3>{{ step.title }}</h3>
                     </div>
                     <p>{{ step.body }}</p>
-                    <div class="step-screenshot">
-                        <div class="iphone-frame">
-                            <div class="iphone-screen">
-                                <img :src="step.screenshot" :alt="step.alt" loading="lazy" />
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -36,22 +27,26 @@
 <script setup lang="ts">
 const steps = [
     {
-        title: '練習後にメモ',
-        body: '打ちっぱなしやラウンド後、気づいたことをその場でサッと記録。クラブ・状況別に整理されます。',
-        screenshot: '/assets/iphone-memolie-home-detail.png',
-        alt: 'MemoLie 実機 - ホーム（記録・一覧）',
+        title: '気づいたら、すぐメモ',
+        body: '練習場でもレッスン後でも。「これだ！」と思った瞬間に、クラブごとのチェックリストへ。',
     },
     {
-        title: 'コース前に確認',
-        body: 'スタートの5分前、今日意識すべきポイントをさっとチェック。自信を持ってティーグラウンドに立てます。',
-        screenshot: '/assets/iphone-memolie-home.png',
-        alt: 'MemoLie 実機 - ホーム（スコア・クラブ）',
+        title: '打つ前に、サッと見返す',
+        body: 'ラウンドのスタート前や、練習の1球目の前に。今日意識することが30秒で思い出せる。',
     },
     {
-        title: '成長を振り返る',
-        body: '修正の履歴がログとして残るので、自分の変化が見えます。「ドライバーが安定してきた」を実感できる。',
-        screenshot: '/assets/iphone-memolie-growth-log.png',
-        alt: 'MemoLie 実機 - 成長ログ',
+        title: '変化を、振り返る',
+        body: 'メモを書き換えた履歴やカレンダーで、自分がどう変わってきたかが見える。',
     },
 ]
 </script>
+
+<style scoped>
+.howto {
+    background: var(--white);
+}
+.howto .step-card {
+    background: var(--gray);
+    border-color: transparent;
+}
+</style>
