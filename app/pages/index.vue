@@ -4,18 +4,18 @@
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
-        <UseCasesSection />
-        <FeaturesSection />
-        <PricingSection />
+        <PillarsSection />
+        <MoreFeaturesSection />
         <HowToSection />
-        <TargetSection />
-        <PrivacySection />
+        <PricingSection />
+        <FaqSection />
         <CtaSection />
         <AppFooter />
     </div>
 </template>
 
 <script setup lang="ts">
+definePageMeta({ lpVariant: "a" });
 import AOS from "aos";
 import "aos/dist/aos.css";
 

@@ -2,18 +2,23 @@
     <section class="section pricing" id="pricing">
         <div class="section-inner">
             <p class="section-label" data-aos="fade-up">Plans</p>
-            <h2 class="section-title no-wrap-mobile" data-aos="fade-up">
+            <h2 class="section-title" data-aos="fade-up">
                 無料で始めて、<br />必要ならプレミアムへ
             </h2>
             <p class="section-body" data-aos="fade-up">
-                メモ・飛距離・成長ログなどのコア機能はログインなしで利用できます。
+                チェックリストや練習の記録など、メインの機能はぜんぶ無料。動画をたくさん残したくなったら、プレミアムへ。
             </p>
             <div class="pricing-plans-comparison" data-aos="fade-up">
                 <div class="pricing-card pricing-card--free">
                     <h3 class="pricing-card-title">無料</h3>
-                    <p class="pricing-card-note">スイング動画のクラウド保存</p>
-                    <p class="pricing-card-highlight">最大 3 本まで</p>
-                    <p class="pricing-card-subtext">（Google ログイン後）</p>
+                    <p class="pricing-plan-price pricing-free-price">¥0</p>
+                    <ul class="pricing-free-list">
+                        <li>チェックリスト・ルーティーン</li>
+                        <li>クラブ別の飛距離・アプローチ距離メモ</li>
+                        <li>練習・ラウンドの記録、費用グラフ</li>
+                        <li>友達とのメモ共有（Google ログイン後）</li>
+                        <li>スイング動画の保存 <strong>5 本まで</strong>（Google ログイン後）</li>
+                    </ul>
                 </div>
                 <div class="pricing-premium" data-aos="fade-up">
                     <h3 class="pricing-premium-title">プレミアム</h3>
@@ -23,14 +28,17 @@
                             <p class="pricing-plan-price">¥300</p>
                             <p class="pricing-plan-note">1日あたり約10円</p>
                         </div>
-                        <div class="pricing-card pricing-card--premium">
+                        <div class="pricing-card pricing-card--premium pricing-card--recommend">
+                            <span class="pricing-badge">初月無料</span>
                             <p class="pricing-plan-title">年額プラン</p>
                             <p class="pricing-plan-price">¥3,000</p>
-                            <p class="pricing-plan-note">1日あたり約8円</p>
+                            <p class="pricing-plan-note">月あたり250円・1日あたり約8円</p>
                         </div>
                     </div>
                     <ul class="pricing-list pricing-list--premium">
-                        <li>スイング動画の保存が<strong class="pricing-unlimited">無制限に</strong></li>
+                        <li>無料プランのすべての機能</li>
+                        <li>スイング動画の保存が<strong class="pricing-unlimited">最大 15 本</strong>に</li>
+                        <li>アプリ内のバナー広告が非表示に</li>
                         <li>いつでもストアから解約・管理</li>
                     </ul>
                     <p class="pricing-foot pricing-foot--premium">
@@ -58,6 +66,56 @@
 <script setup lang="ts"></script>
 
 <style scoped>
+.pricing-plans-comparison .pricing-card--free {
+    text-align: left;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.pricing-card--free .pricing-free-price {
+    color: var(--white);
+    margin: 4px 0 14px;
+}
+.pricing-free-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.5;
+}
+.pricing-free-list li {
+    position: relative;
+    padding-left: 20px;
+}
+.pricing-free-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--yellow);
+    font-weight: 900;
+}
+.pricing-free-list strong {
+    color: var(--yellow);
+}
+.pricing-card--recommend {
+    position: relative;
+    outline: 2px solid var(--yellow-dark);
+}
+.pricing-badge {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 900;
+    padding: 3px 10px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
 .pricing {
     background: var(--black);
 }
