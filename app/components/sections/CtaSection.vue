@@ -9,17 +9,14 @@
         />
         <p class="section-label" data-aos="fade-up">Download</p>
         <h2 class="section-title" data-aos="fade-up">
-            次の練習から、<br />メモしてみよう。
+            次のラウンドから、<br />変わる。
         </h2>
         <p class="section-body no-wrap-mobile" data-aos="fade-up">
-            ダウンロードは無料。メモは登録なしで、今日からすぐ使える。<br />「あのとき掴んだ感覚」を、もう置き忘れない。
+            ダウンロードは無料。メモ機能は登録なしですぐ使えます。<br />「あのとき掴んだ感覚」を、もう忘れない。
         </p>
         <div class="cta-actions" data-aos="fade-up">
             <AppStoreButton cta="bottom" />
-            <span class="cta-note"
-                >iPhone対応 ・ 基本無料 ・ メモは登録不要</span
-            >
+            <span class="cta-note">無料ではじめる ・ 登録不要 ・ iPhone / iPad</span>
         </div>
     </section>
 </template>
-

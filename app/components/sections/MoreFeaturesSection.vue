@@ -3,7 +3,7 @@
         <div class="section-inner">
             <p class="section-label" data-aos="fade-up">And more</p>
             <h2 class="section-title" data-aos="fade-up">
-                練習の記録も、<br class="sp-only" />友達との共有も。
+                練習の記録も、<br class="sp-only" />仲間との共有も。
             </h2>
 
             <div class="more-grid">
@@ -52,32 +52,32 @@ import { FEATURE_ICONS } from "../../utils/featureIcons";
 const visualCards = [
     {
         tag: "Log",
-        title: "練習もラウンドも、カレンダーに",
-        body: "球数・金額・スコアを記録すると、月ごとの費用グラフまで自動でできあがる。",
+        title: "練習もラウンドも、記録が残る",
+        body: "球数・金額・スコアをカレンダーに記録。月ごとの費用グラフも自動で見える。",
         screen: "log",
-        alt: "練習とラウンドの日に印がついたカレンダーと、月ごとの費用グラフ",
+        alt: "練習とラウンドの記録カレンダー",
     },
     {
         tag: "Distance",
-        title: "クラブ別の飛距離が、ひと目で",
-        body: "ハーフ・平均・最高の3つを記録。番手選びに迷ったら、この表を見るだけ。",
+        title: "番手ごとの飛距離を一覧に",
+        body: "ハーフ・平均・最高の3段階で記録。コースで迷ったら、この表を開くだけ。",
         screen: "distance",
-        alt: "クラブごとのハーフ・平均・最高飛距離が並ぶ表",
+        alt: "クラブ別飛距離の一覧表",
     },
     {
         tag: "Share",
-        title: "友達と、コツを教え合う",
-        body: "共有コードを送るだけで、友達のメモが見られる。気に入ったら自分のメモにコピー。",
+        title: "ゴルフ仲間と、メモを共有",
+        body: "共有コードを送るだけで、友達のメモが見られる。いいコツは自分のメモにコピーできる。",
         screen: "friend",
-        alt: "友達のチェックリストやルーティーンを閲覧している画面",
+        alt: "友達のメモを閲覧している画面",
     },
 ];
 
 const miniCards = [
-    { icon: FEATURE_ICONS.baseForm, title: "ベースフォーム", body: "崩れたときに戻る原点。初期ポジションやスタンスを残す。" },
-    { icon: FEATURE_ICONS.situation, title: "シチュエーション別", body: "ラフ、バンカー、つま先上がり。状況ごとの対策をまとめる。" },
-    { icon: FEATURE_ICONS.mistake, title: "よくあるミス", body: "ミスと対策をセットで。自分専用のトラブルシュート。" },
-    { icon: FEATURE_ICONS.history, title: "メモの軌跡", body: "メモを変えるたびに履歴が残る。自分の変化が見える。" },
+    { icon: FEATURE_ICONS.baseForm, title: "ベースフォーム", body: "崩れたときに戻る原点。スタンスやグリップを記録。" },
+    { icon: FEATURE_ICONS.situation, title: "シチュエーション別", body: "バンカー、ラフ、つま先上がり。状況ごとの対処法。" },
+    { icon: FEATURE_ICONS.mistake, title: "よくあるミス", body: "ミスのパターンと対策をセットで記録。" },
+    { icon: FEATURE_ICONS.history, title: "メモの履歴", body: "メモの変遷が自動で残る。自分の成長が見える。" },
 ];
 </script>
 
@@ -120,7 +120,6 @@ const miniCards = [
     line-height: 1.75;
     color: var(--text);
 }
-/* The phone rises from the bottom edge of the card; its lower half is clipped. */
 .more-card-stage {
     position: relative;
     margin-top: auto;

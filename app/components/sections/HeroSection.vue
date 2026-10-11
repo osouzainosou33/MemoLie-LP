@@ -2,22 +2,19 @@
     <section class="hero" id="top">
         <div class="hero-inner">
             <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
-                <div class="hero-badge">ゴルフ専用メモアプリ</div>
+                <div class="hero-badge">Golf Memo App</div>
                 <h1 class="hero-headline">
-                    そのレッスン、<br />
-                    ちゃんと<span class="accent">覚えてる？</span>
+                    ゴルフの<br />
+                    <span class="accent">「忘れたくない」</span>を、<br />
+                    ぜんぶここに。
                 </h1>
                 <p class="hero-sub">
-                    打ちっぱなしでは打てるのに、コースでは打てない。<br class="pc-only" />
-                    それ、気づきを“置き忘れてる”だけかも。
-                </p>
-                <p class="hero-sub hero-sub--strong">
-                    <strong>MemoLie（メモリー）</strong>は、チェックリスト・スイング動画・参考YouTubeを
-                    クラブごとにまとめておける、自分だけのゴルフノート。
+                    レッスンのコツ、ベストスイング、アプローチの打ち方。<br class="pc-only" />
+                    クラブごとにまとめて、打つ前にサッと見返せる。
                 </p>
                 <div class="hero-actions">
                     <AppStoreButton cta="hero" />
-                    <div class="hero-trust">iPhone対応 ・ 基本無料 ・ メモは登録不要</div>
+                    <div class="hero-trust">無料ではじめる ・ 登録不要 ・ iPhone / iPad</div>
                 </div>
             </div>
 
@@ -26,7 +23,7 @@
                     <PhoneMock screen="checklist" alt="ドライバーのチェックリスト画面" />
                 </div>
                 <div class="hero-device hero-device--front">
-                    <PhoneMock screen="home" alt="MemoLieのホーム画面。目標スコアとベストスコア、ベースフォームのメモが並ぶ" eager />
+                    <PhoneMock screen="home" alt="MemoLieのホーム画面" eager />
                 </div>
             </div>
         </div>
@@ -35,11 +32,7 @@
 
 <style scoped>
 .hero-sub {
-    margin-bottom: 14px;
-}
-.hero-sub--strong {
-    color: rgba(0, 0, 0, 0.78);
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 .hero-trust {
     font-size: 12.5px;

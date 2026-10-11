@@ -3,7 +3,7 @@
         <div class="section-inner">
             <p class="section-label" style="text-align: center" data-aos="fade-up">How to Use</p>
             <h2 class="section-title no-wrap-mobile" style="text-align: center" data-aos="fade-up">
-                使い方は、<br />たったこれだけ。
+                使い方は、3ステップだけ。
             </h2>
             <div class="steps-grid">
                 <div
@@ -27,16 +27,16 @@
 <script setup lang="ts">
 const steps = [
     {
-        title: '気づいたら、すぐメモ',
-        body: '練習場でもレッスン後でも。「これだ！」と思った瞬間に、クラブごとのチェックリストへ。',
+        title: '気づいたら、メモする',
+        body: '練習場でもレッスン後でもOK。「これだ！」と思ったコツを、クラブごとのチェックリストに残す。',
     },
     {
-        title: '打つ前に、サッと見返す',
-        body: 'ラウンドのスタート前や、練習の1球目の前に。今日意識することが30秒で思い出せる。',
+        title: '打つ前に、見返す',
+        body: 'ラウンドのスタート前に、MemoLie を開く。今日意識することが30秒で頭に入る。',
     },
     {
-        title: '変化を、振り返る',
-        body: 'メモを書き換えた履歴やカレンダーで、自分がどう変わってきたかが見える。',
+        title: '積み重ねが、スコアになる',
+        body: '気づきが増えるほど、自分だけのゴルフノートが充実していく。迷いが減って、スコアが安定する。',
     },
 ]
 </script>
