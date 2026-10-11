@@ -10,12 +10,12 @@
         />
         <p class="section-label" data-aos="fade-up">Solution</p>
         <h2 class="section-title" data-aos="fade-up">
-            迷ったら、<br />ここに帰ってくればいい。
+            答えは、<br />過去の自分が知っている。
         </h2>
         <p class="section-body no-wrap-mobile" data-aos="fade-up">
-            レッスンで教わったこと、動画で見たコツ、自分で掴んだ感覚。<br />
-            MemoLie（メモリー）は、そのぜんぶをクラブ別・距離別にしまっておける「帰る場所」。<br />
-            打つ前にサッと見返せば、今日やることがはっきりする。
+            練習やレッスンで掴んだコツを、クラブごとに整理して残す。<br />
+            打つ前にサッと見返す。それだけで、コースでの迷いがなくなる。<br />
+            MemoLie は、自分だけの「ゴルフの正解」を積み上げるアプリです。
         </p>
     </section>
 </template>

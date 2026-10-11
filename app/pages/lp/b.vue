@@ -4,14 +4,14 @@
 
         <section class="b-hero">
             <div class="b-hero-copy">
-                <p class="b-eyebrow">ゴルフ専用メモアプリ MemoLie</p>
+                <p class="b-eyebrow">Golf Memo App — MemoLie</p>
                 <h1 class="b-title">
-                    練習場の「これだ！」を、<br />
-                    <span>コースまで。</span>
+                    ゴルフの「忘れたくない」を、<br />
+                    <span>ぜんぶここに。</span>
                 </h1>
                 <p class="b-lead">
-                    クラブ別のチェックリスト、自分のスイング動画、お手本のYouTube。<br class="pc-only" />
-                    打つ前に見返すものを、ぜんぶ1つのアプリに。
+                    レッスンのコツ、ベストスイング、距離ごとの打ち方。<br class="pc-only" />
+                    クラブ別にまとめて、打つ前にサッと見返せる。
                 </p>
                 <div class="b-actions">
                     <AppStoreButton cta="hero" light />
@@ -66,8 +66,8 @@
 
         <section class="b-final">
             <img src="/assets/memokun_fun.png" alt="" aria-hidden="true" class="b-final-memokun" loading="lazy" />
-            <h2>次の1球から、<br class="sp-only" />メモしよう。</h2>
-            <p>ダウンロードは無料。メモは登録なしで今日から使えます。</p>
+            <h2>次のラウンドから、<br class="sp-only" />変わる。</h2>
+            <p>ダウンロードは無料。メモ機能は登録なしですぐ使えます。</p>
             <AppStoreButton cta="bottom" light />
         </section>
 
@@ -93,20 +93,20 @@ definePageMeta({ lpVariant: "b" });
 
 const steps = [
     {
-        title: "気づいたら、メモする",
-        body: "レッスンや練習で掴んだコツを、クラブごとのチェックリストへ。大事なものは♥で一番上に。",
+        title: "気づいたら、すぐメモ",
+        body: "練習やレッスンで掴んだコツを、クラブごとのチェックリストへ。大事なポイントはハートで固定。",
         screen: "checklist",
         alt: "ドライバーのチェックリスト画面",
     },
     {
-        title: "打つ前に、見返す",
-        body: "ラウンド前や1球目の前に、ホームを開くだけ。クラブ・状況・距離ごとのメモにすぐ届く。",
+        title: "打つ前に、30秒で見返す",
+        body: "ラウンド前にホームを開くだけ。クラブ・状況・距離ごとの「自分の正解」がすぐ見つかる。",
         screen: "home_lists",
         alt: "クラブ・シチュエーション・アプローチ距離が並ぶホーム画面",
     },
     {
-        title: "友達と、教え合う",
-        body: "共有コードを送れば、友達のメモが見られる。いいと思ったら自分のメモにコピー。",
+        title: "仲間と、コツを共有",
+        body: "共有コードを送れば、友達のメモが見られる。いいコツは自分のメモにコピーできる。",
         screen: "friend",
         alt: "友達のメモを閲覧している画面",
     },
@@ -114,11 +114,11 @@ const steps = [
 
 const features = [
     { icon: FEATURE_ICONS.checklist, title: "チェックリスト", body: "クラブ・状況・距離ごとに、意識するポイントを整理。" },
-    { icon: FEATURE_ICONS.video, title: "動画＋参考YouTube", body: "自分のスイングとお手本動画を同じ画面に保存。" },
-    { icon: FEATURE_ICONS.flag, title: "10ヤードごとの基準", body: "アプローチの振り幅やクラブを距離ごとにメモ。" },
-    { icon: FEATURE_ICONS.compass, title: "クラブ別飛距離", body: "ハーフ・平均・最高を記録して一覧表に。" },
-    { icon: FEATURE_ICONS.history, title: "練習・ラウンド記録", body: "カレンダーに球数・費用・スコアを残せる。" },
-    { icon: FEATURE_ICONS.users, title: "友達と共有", body: "共有コードでお互いのメモを見せ合える。" },
+    { icon: FEATURE_ICONS.video, title: "スイング動画", body: "ベストスイングを保存。参考YouTube・Instagramも一緒に。" },
+    { icon: FEATURE_ICONS.flag, title: "距離ごとのメモ", body: "10ヤード刻みで、振り幅やクラブの選び方を記録。" },
+    { icon: FEATURE_ICONS.compass, title: "飛距離一覧", body: "番手ごとのハーフ・平均・最高をひと目で確認。" },
+    { icon: FEATURE_ICONS.history, title: "練習・ラウンド記録", body: "球数・費用・スコアをカレンダーに残せる。" },
+    { icon: FEATURE_ICONS.users, title: "仲間と共有", body: "共有コードでお互いのメモを見せ合える。" },
 ];
 
 const showSticky = ref(false);
@@ -128,11 +128,11 @@ function onScroll() {
 }
 
 useSeoMeta({
-    title: "練習場の「これだ！」をコースまで | ゴルフメモアプリ MemoLie（メモリー）",
+    title: "MemoLie | ゴルフの「忘れたくない」をぜんぶここに",
     description:
-        "クラブ別のチェックリスト、スイング動画、参考YouTube、10ヤードごとのアプローチメモ。打つ前に見返すものを1つにまとめるゴルフメモアプリ。無料・登録不要。",
-    ogTitle: "練習場の「これだ！」を、コースまで。| MemoLie",
-    ogDescription: "打つ前に見返すものを、ぜんぶ1つのアプリに。無料のゴルフメモアプリ MemoLie。",
+        "レッスンのコツ、ベストスイング、距離ごとの打ち方。クラブ別に整理して打つ前にサッと見返せるゴルフ専用メモアプリ。無料・登録不要。",
+    ogTitle: "MemoLie | ゴルフの「忘れたくない」をぜんぶここに",
+    ogDescription: "練習で掴んだコツをクラブ別に整理。打つ前に見返すだけでコースでの迷いがなくなる。",
     ogUrl: "https://memolie.app/lp/b",
     ogImage: "https://memolie.app/assets/icon.png",
     robots: "noindex, follow",

@@ -4,13 +4,14 @@
             <div class="problem-intro" data-aos="fade-up">
                 <img
                     src="/assets/memokun_worry.png"
-                    alt="悩むメモくん"
+                    alt=""
+                    aria-hidden="true"
                     loading="lazy"
                     class="memokun-worry"
                 />
                 <p class="section-label">Problem</p>
                 <h2 class="section-title">
-                    自分のフォーム、<br />迷子になってない？
+                    練習してるのに、<br />なぜか上手くならない。
                 </h2>
             </div>
             <div class="problem-grid">
@@ -43,19 +44,19 @@
 <script setup lang="ts">
 const problems = [
     {
-        iconSvg: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
-        title: '教わるほど、迷子になる',
-        body: 'コーチ、友達、YouTube。いろんな人に教わるほど「結局どれが自分に合ってるの？」ってなる。',
-    },
-    {
         iconSvg: '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="m8 21 4-4 4 4"/><path d="M10 13 8 9l-4 4"/><path d="m14 13 2-4 4 4"/>',
-        title: '「これだ！」が、次の練習で消えてる',
-        body: '動画を見て分かった気になっても、1週間後にはほとんど覚えてない。気づきが上書きされていく。',
+        title: '教わったコツ、1週間後に覚えてる？',
+        body: 'レッスンや動画で「これだ！」と思っても、次の練習では忘れてる。同じことを何度も教わって、時間もお金も消えていく。',
     },
     {
         iconSvg: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>',
-        title: '練習場で打てても、コースで打てない',
-        body: 'ライも距離も毎回バラバラ。状況ごとの「自分の正解」が、手元に残っていない。',
+        title: '練習場で打てたのに、コースでは打てない',
+        body: 'フラットな練習場では打てる。でもコースに出ると「あれ、どう打つんだっけ」。状況ごとの正解が、頭から消えてる。',
+    },
+    {
+        iconSvg: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+        title: '情報が多すぎて、何を信じればいいか迷う',
+        body: 'YouTube、コーチ、ゴルフ仲間。みんな言うことが違う。自分に合ってるのがどれか分からなくなる。',
     },
 ]
 </script>
