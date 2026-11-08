@@ -150,25 +150,66 @@ const miniCards = [
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 32px;
+    gap: 22px;
+    margin-top: 40px;
 }
+/* 机に貼った付箋：色と傾きを1枚ずつ変え、右下が少しめくれた立体感を出す
+   （AOS が transform を上書きするため、傾きは rotate プロパティで指定） */
 .mini-card {
     position: relative;
-    background: #fff;
-    border-radius: 6px;
-    padding: 18px 18px 18px 22px;
+    background: var(--sticky-yellow);
+    padding: 26px 18px 22px;
     display: flex;
     gap: 14px;
     align-items: flex-start;
-    border-left: 6px solid var(--lime);
-    box-shadow: 0 6px 14px rgba(29, 29, 27, 0.06);
+    rotate: -1.6deg;
+    box-shadow: 0 1px 1px rgba(29, 29, 27, 0.06), 0 10px 18px -6px rgba(29, 29, 27, 0.22);
+    transition: rotate 0.2s ease, translate 0.2s ease;
+}
+.mini-card:nth-child(2) {
+    background: var(--sticky-green);
+    rotate: 1.2deg;
+}
+.mini-card:nth-child(3) {
+    background: var(--sticky-pink);
+    rotate: -0.8deg;
+}
+.mini-card:nth-child(4) {
+    background: #d9ecff;
+    rotate: 1.6deg;
+}
+.mini-card:hover {
+    rotate: 0deg;
+    translate: 0 -3px;
+}
+/* 上辺のマスキングテープ */
+.mini-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 64px;
+    height: 20px;
+    transform: translateX(-50%) rotate(-3deg);
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 1px 2px rgba(29, 29, 27, 0.08);
+}
+/* 右下のめくれ */
+.mini-card::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.85) 50%, var(--paper-deep) 50%);
+    box-shadow: -2px -2px 4px rgba(29, 29, 27, 0.08);
 }
 .mini-icon {
     width: 38px;
     height: 38px;
-    border-radius: 10px;
-    background: var(--paper);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
     color: var(--ink);
     display: grid;
     place-items: center;
