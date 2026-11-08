@@ -1,97 +1,139 @@
 <template>
     <section class="hero" id="top">
         <div class="hero-inner">
-            <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
-                <div class="hero-badge">Golf Memo App</div>
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="700">
+                <div class="hero-badge">ゴルフ専用メモアプリ</div>
                 <h1 class="hero-headline">
-                    ゴルフの<br />
-                    <span class="accent">「忘れたくない」</span>を、<br />
-                    ぜんぶここに。
+                    <span class="phrase">迷ったら、</span><br />
+                    <span class="phrase marker">ここに戻れば</span><span class="phrase marker">いい。</span>
                 </h1>
                 <p class="hero-sub">
-                    レッスンのコツ、ベストスイング、アプローチの打ち方。<br class="pc-only" />
-                    クラブごとにまとめて、打つ前にサッと見返せる。
+                    <span class="phrase">コーチの言葉、</span><span class="phrase">動画で見たコツ、</span><span class="phrase">練習場で掴んだ感覚。</span><br />
+                    <span class="phrase">教わるほど増える情報を、</span><span class="phrase">自分だけの「帰る場所」に</span><span class="phrase">まとめるアプリです。</span>
                 </p>
                 <div class="hero-actions">
-                    <AppStoreButton cta="hero" />
-                    <div class="hero-trust">無料ではじめる ・ 登録不要 ・ iPhone / iPad</div>
+                    <AppStoreButton cta="hero" label="App Storeで無料ダウンロード" />
+                    <div class="hero-trust">無料 ・ 登録不要 ・ iPhone / iPad</div>
                 </div>
             </div>
 
-            <div class="hero-visual" data-aos="fade-left" data-aos-duration="900" data-aos-delay="120">
-                <div class="hero-device hero-device--back">
-                    <PhoneMock screen="checklist" alt="ドライバーのチェックリスト画面" />
+            <div class="hero-visual" data-aos="fade-up" data-aos-duration="800" data-aos-delay="120">
+                <!-- 付箋：教わったことが散らばっている状態を表す -->
+                <div class="sticky sticky--yellow">
+                    <small>コーチに言われたこと</small>
+                    <span class="phrase">ボールは</span><span class="phrase">左かかと線上。</span><span class="phrase">ティーは高め</span>
                 </div>
-                <div class="hero-device hero-device--front">
-                    <PhoneMock screen="home" alt="MemoLieのホーム画面" eager />
+                <div class="sticky sticky--green">
+                    <small>練習場で掴んだ感覚</small>
+                    <span class="phrase">フィニッシュで</span><span class="phrase">3秒止まれたら</span><span class="phrase">合格</span>
                 </div>
+                <!-- 散らばったメモが、アプリの1画面にまとまる -->
+                <div class="hero-device">
+                    <PhoneMock screen="checklist" alt="ドライバーのチェックリスト画面" eager />
+                </div>
+                <img class="hero-memokun" src="/assets/memokun.png" alt="めもくん" width="160" height="160" />
             </div>
         </div>
     </section>
 </template>
 
 <style scoped>
-.hero-sub {
-    margin-bottom: 28px;
-}
-.hero-trust {
-    font-size: 12.5px;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.62);
-}
-
 .hero-visual {
     position: relative;
-    height: 640px;
-    display: block;
+    height: 620px;
 }
 .hero-device {
     position: absolute;
-}
-.hero-device--front {
-    width: 330px;
-    left: 50%;
+    left: 56%;
     top: 0;
-    transform: translateX(-38%);
-    z-index: 2;
-}
-.hero-device--back {
     width: 290px;
-    left: 50%;
-    top: 70px;
-    transform: translateX(-98%) rotate(-6deg);
+    transform: translateX(-50%) rotate(3deg);
     z-index: 1;
-    opacity: 0.96;
+}
+.sticky {
+    position: absolute;
+    z-index: 2;
+    width: 180px;
+    padding: 16px 16px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.55;
+    color: var(--ink);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+.sticky small {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 6px;
+}
+.sticky--yellow {
+    background: var(--sticky-yellow);
+    left: -6%;
+    top: 90px;
+    transform: rotate(-6deg);
+}
+.sticky--green {
+    background: var(--sticky-green);
+    left: -2%;
+    top: 340px;
+    transform: rotate(4deg);
+}
+.hero-memokun {
+    position: absolute;
+    right: -2%;
+    bottom: 20px;
+    width: 150px;
+    height: auto;
+    z-index: 3;
+    transform: rotate(8deg);
+    animation: memokun-float 3.2s ease-in-out infinite;
+}
+@keyframes memokun-float {
+    0%,
+    100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -10px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-memokun {
+        animation: none;
+    }
 }
 
-@media (max-width: 1100px) {
-    .hero-device--front {
-        width: 290px;
-    }
-    .hero-device--back {
-        width: 250px;
-    }
-    .hero-visual {
-        height: 580px;
-    }
-}
+/* スマホ：端末の上部と付箋が1画面目の下端に見えるよう詰める */
 @media (max-width: 900px) {
     .hero-visual {
-        height: auto;
-        margin-top: 36px;
-        display: flex;
-        justify-content: center;
+        height: min(480px, 124vw);
+        margin: 30px auto 0;
+        width: 100%;
+        max-width: 420px;
     }
     .hero-device {
-        position: relative;
+        width: min(230px, 58vw);
+        left: 58%;
     }
-    .hero-device--front {
-        width: min(300px, 72vw);
-        left: auto;
-        transform: none;
+    .sticky {
+        width: 140px;
+        font-size: 12px;
+        padding: 12px;
     }
-    .hero-device--back {
-        display: none;
+    .sticky--yellow {
+        left: -2%;
+        top: 40px;
+    }
+    .sticky--green {
+        left: 0;
+        top: 250px;
+    }
+    .hero-memokun {
+        width: 96px;
+        right: -4%;
+        bottom: 10px;
     }
 }
 </style>

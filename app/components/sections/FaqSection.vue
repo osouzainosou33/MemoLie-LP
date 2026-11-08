@@ -1,8 +1,11 @@
 <template>
-    <section class="section faq" id="faq">
-        <div class="section-inner faq-inner">
-            <p class="section-label" data-aos="fade-up">FAQ</p>
-            <h2 class="section-title" data-aos="fade-up">よくある質問</h2>
+    <!-- よくある質問：インデックスタブ付きのカード -->
+    <section class="memo-section bg-deep faq" id="faq">
+        <div class="memo-inner faq-inner">
+            <div class="memo-center" data-aos="fade-up">
+                <p class="memo-label">FAQ</p>
+                <h2 class="memo-title">よくある質問</h2>
+            </div>
             <div class="faq-list">
                 <details v-for="item in faqs" :key="item.q" class="faq-item" data-aos="fade-up">
                     <summary>
@@ -68,31 +71,23 @@ useHead({
 </script>
 
 <style scoped>
-.faq {
-    background: var(--white);
-}
 .faq-inner {
     max-width: 760px;
 }
-.faq .section-label,
-.faq .section-title {
-    text-align: center;
-}
 .faq-list {
-    margin-top: 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    margin-top: 48px;
+    display: grid;
+    gap: 14px;
 }
 .faq-item {
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    background: var(--white);
-    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fff;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    box-shadow: 3px 3px 0 var(--ink);
+    overflow: hidden;
 }
 .faq-item[open] {
-    border-color: #c9d64a;
-    box-shadow: 0 8px 24px rgba(80, 100, 0, 0.08);
+    box-shadow: 3px 3px 0 var(--green);
 }
 .faq-item summary {
     list-style: none;
@@ -101,64 +96,68 @@ useHead({
     align-items: center;
     gap: 14px;
     padding: 18px 20px;
-    font-size: 15.5px;
-    font-weight: 800;
 }
 .faq-item summary::-webkit-details-marker {
     display: none;
 }
+/* Q はインデックスタブ風 */
 .faq-q {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    background: var(--yellow);
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
     display: grid;
     place-items: center;
-    font-size: 14px;
+    background: var(--lime);
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    font-family: var(--font-logo);
     font-weight: 900;
-    flex-shrink: 0;
+    font-size: 15px;
+    color: var(--ink);
+    transform: rotate(-4deg);
 }
 .faq-question {
     flex: 1;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.5;
 }
 .faq-toggle {
-    width: 14px;
-    height: 14px;
     position: relative;
+    width: 16px;
+    height: 16px;
     flex-shrink: 0;
 }
 .faq-toggle::before,
 .faq-toggle::after {
     content: "";
     position: absolute;
-    background: var(--black);
-    border-radius: 2px;
-    top: 50%;
     left: 0;
-    width: 14px;
-    height: 2px;
-    transform: translateY(-50%);
+    top: 7px;
+    width: 16px;
+    height: 2.5px;
+    border-radius: 2px;
+    background: var(--ink);
     transition: transform 0.2s;
 }
 .faq-toggle::after {
-    transform: translateY(-50%) rotate(90deg);
+    transform: rotate(90deg);
 }
 .faq-item[open] .faq-toggle::after {
-    transform: translateY(-50%) rotate(0deg);
+    transform: rotate(0deg);
 }
 .faq-answer {
-    padding: 0 20px 20px 62px;
-    font-size: 14.5px;
-    line-height: 1.85;
-    color: var(--text);
+    margin: 0 20px;
+    padding: 16px 0 20px 46px;
+    border-top: 2px dashed rgba(29, 29, 27, 0.14);
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--ink-sub);
 }
-@media (max-width: 600px) {
-    .faq-item summary {
-        font-size: 14.5px;
-        padding: 16px;
-    }
+@media (max-width: 480px) {
     .faq-answer {
-        padding: 0 16px 18px;
+        padding-left: 0;
     }
 }
 </style>
