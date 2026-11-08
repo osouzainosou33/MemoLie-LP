@@ -78,7 +78,7 @@ const pillars = [
         ],
         screen: "approach",
         alt: "アプローチ30ヤードのメモ画面",
-        note: "30y＝腰から腰",
+        note: "30y＝52°で腰から腰",
         sticky: "var(--sticky-pink)",
     },
 ];
