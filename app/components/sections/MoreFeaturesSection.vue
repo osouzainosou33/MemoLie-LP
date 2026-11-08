@@ -1,10 +1,13 @@
 <template>
-    <section class="section more" id="more-features">
-        <div class="section-inner">
-            <p class="section-label" data-aos="fade-up">And more</p>
-            <h2 class="section-title" data-aos="fade-up">
-                練習の記録も、<br class="sp-only" />仲間との共有も。
-            </h2>
+    <!-- その他の機能：テープで留めたカードと、インデックスカード -->
+    <section class="memo-section bg-deep more" id="more-features">
+        <div class="memo-inner">
+            <div class="memo-center" data-aos="fade-up">
+                <p class="memo-label">And More</p>
+                <h2 class="memo-title">
+                    <span class="phrase">練習の記録も、</span><span class="phrase">仲間との共有も。</span>
+                </h2>
+            </div>
 
             <div class="more-grid">
                 <article
@@ -14,6 +17,7 @@
                     data-aos="fade-up"
                     :data-aos-delay="index * 80"
                 >
+                    <span class="tape" aria-hidden="true"></span>
                     <div class="more-card-text">
                         <span class="more-card-tag">{{ card.tag }}</span>
                         <h3>{{ card.title }}</h3>
@@ -40,7 +44,7 @@
             </ul>
 
             <div class="more-link-wrap" data-aos="fade-up">
-                <NuxtLink to="/features" class="more-link">すべての機能を見る →</NuxtLink>
+                <NuxtLink to="/features" class="more-link">すべての機能を見る</NuxtLink>
             </div>
         </div>
     </section>
@@ -51,21 +55,21 @@ import { FEATURE_ICONS } from "../../utils/featureIcons";
 
 const visualCards = [
     {
-        tag: "Log",
+        tag: "記録",
         title: "練習もラウンドも、記録が残る",
         body: "球数・金額・スコアをカレンダーに記録。月ごとの費用グラフも自動で見える。",
         screen: "log",
         alt: "練習とラウンドの記録カレンダー",
     },
     {
-        tag: "Distance",
+        tag: "飛距離",
         title: "番手ごとの飛距離を一覧に",
         body: "ハーフ・平均・最高の3段階で記録。コースで迷ったら、この表を開くだけ。",
         screen: "distance",
         alt: "クラブ別飛距離の一覧表",
     },
     {
-        tag: "Share",
+        tag: "共有",
         title: "ゴルフ仲間と、メモを共有",
         body: "共有コードを送るだけで、友達のメモが見られる。いいコツは自分のメモにコピーできる。",
         screen: "friend",
@@ -82,80 +86,90 @@ const miniCards = [
 </script>
 
 <style scoped>
-.more {
-    background: var(--gray);
-}
 .more-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 40px;
+    gap: 28px;
+    margin-top: 56px;
 }
 .more-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 28px;
-    overflow: hidden;
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 14px 28px rgba(29, 29, 27, 0.08);
+}
+.more-card:nth-child(2) {
+    transform: rotate(0.8deg);
+}
+.more-card:nth-child(3) {
+    transform: rotate(-0.6deg);
 }
 .more-card-text {
-    padding: 28px 28px 8px;
+    padding: 30px 26px 8px;
 }
 .more-card-tag {
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #6b7a00;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--green);
+    border-bottom: 2px solid var(--lime);
 }
 .more-card h3 {
     font-size: 19px;
     font-weight: 900;
     line-height: 1.4;
-    margin: 6px 0 8px;
+    color: var(--ink);
+    margin: 10px 0 8px;
 }
 .more-card p {
     font-size: 14px;
-    line-height: 1.75;
-    color: var(--text);
+    line-height: 1.8;
+    color: var(--ink-sub);
 }
 .more-card-stage {
     position: relative;
-    margin-top: auto;
-    height: 330px;
-    background: linear-gradient(180deg, #fff 0%, #f1f5d6 100%);
+    margin: 18px 14px 0;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 6px 6px 0 0;
+    background-color: var(--paper);
+    background-image: var(--grid-bg);
+    background-size: 22px 22px;
 }
 .more-card-phone {
     position: absolute;
-    width: 250px;
+    width: 230px;
     left: 50%;
-    top: 30px;
+    top: 26px;
     transform: translateX(-50%);
 }
-
+/* インデックスカード：左端に色の見出しタブ */
 .mini-grid {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-top: 20px;
+    margin-top: 32px;
 }
 .mini-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 18px;
+    position: relative;
+    background: #fff;
+    border-radius: 6px;
+    padding: 18px 18px 18px 22px;
     display: flex;
     gap: 14px;
     align-items: flex-start;
+    border-left: 6px solid var(--lime);
+    box-shadow: 0 6px 14px rgba(29, 29, 27, 0.06);
 }
 .mini-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: #f1f5d0;
-    color: #5f6e00;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--paper);
+    color: var(--ink);
     display: grid;
     place-items: center;
     flex-shrink: 0;
@@ -170,48 +184,52 @@ const miniCards = [
     stroke-linejoin: round;
 }
 .mini-card h3 {
-    font-size: 14.5px;
+    font-size: 15px;
     font-weight: 900;
+    color: var(--ink);
     margin-bottom: 4px;
 }
 .mini-card p {
-    font-size: 12.5px;
-    line-height: 1.65;
-    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-sub);
 }
-
 .more-link-wrap {
     text-align: center;
-    margin-top: 36px;
+    margin-top: 44px;
 }
 .more-link {
     display: inline-block;
-    font-size: 15px;
+    padding: 14px 30px;
+    border: 2px solid var(--ink);
+    border-radius: var(--radius);
+    background: #fff;
+    color: var(--ink);
     font-weight: 800;
-    color: var(--black);
+    font-size: 15px;
     text-decoration: none;
-    border: 2px solid var(--black);
-    border-radius: 50px;
-    padding: 12px 28px;
-    transition: background 0.2s, color 0.2s;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 0.15s, box-shadow 0.15s;
 }
 .more-link:hover {
-    background: var(--black);
-    color: var(--yellow);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink);
 }
-
+@media (max-width: 1000px) {
+    .mini-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media (max-width: 900px) {
     .more-grid {
         grid-template-columns: 1fr;
-    }
-    .more-card-stage {
-        height: 300px;
-    }
-    .mini-grid {
-        grid-template-columns: 1fr 1fr;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 36px;
     }
 }
-@media (max-width: 520px) {
+@media (max-width: 560px) {
     .mini-grid {
         grid-template-columns: 1fr;
     }
