@@ -26,6 +26,8 @@
             </div>
         </section>
 
+        <!-- 目次と各機能をひとまとめにし、目次の追従を「ほかにも」手前で終わらせる -->
+        <div class="f-body">
         <!-- 目次：ノートのインデックスタブ -->
         <nav class="f-toc" aria-label="機能一覧">
             <a v-for="(f, i) in features" :key="f.id" :href="`#${f.id}`" :style="{ '--tab': tabColors[i % tabColors.length] }">
@@ -63,13 +65,14 @@
                 </article>
             </div>
         </section>
+        </div>
 
         <!-- ほかの機能：机に貼った付箋 -->
         <section class="memo-section bg-deep">
             <div class="memo-inner">
                 <div class="memo-center">
                     <p class="memo-label">Others</p>
-                    <h2 class="memo-title">ほかにも、こんなことができます</h2>
+                    <h2 class="memo-title"><span class="phrase">ほかにも、</span><span class="phrase">こんなことができます</span></h2>
                 </div>
                 <ul class="f-extras">
                     <li v-for="item in extras" :key="item.title" class="f-extra" data-aos="fade-up">
